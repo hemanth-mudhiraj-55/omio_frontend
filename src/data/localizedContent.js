@@ -233,7 +233,7 @@ const heroDescriptionMap = {
 const phraseMap = {
   'Think behind': { en: 'Think behind', de: 'Denken hinter', ja: '人の知性の', pl: 'Myśl stojąca za', uk: 'Думка за' },
   the: { en: 'the', de: 'der', ja: 'その', pl: 'ludzkiej', uk: 'людського' },
-  'Human intelligence': { en: 'Human intelligence', de: 'menschlicher Intelligenz', ja: '人間の知性', pl: 'inteligencji ludzkiej', uk: 'людським інтелектом' },
+  'Artificial intelligence': { en: 'Artificial intelligence', de: 'Künstlicher Intelligenz', ja: '人工知能', pl: 'sztuczną inteligencją', uk: 'штучним інтелектом' },
 };
 
 /* ─────────────────────────────────────────────────

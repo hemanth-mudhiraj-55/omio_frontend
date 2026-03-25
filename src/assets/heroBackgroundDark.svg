@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="764" viewBox="0 0 1600 764">
+  <!--
+    Dark-mode negative variant of heroBackground.
+    This SVG defines an invert+hue-rotate filter.
+    The actual dark-mode inversion is applied via CSS:
+      [data-theme="dark"] .hero-bg { filter: invert(1) hue-rotate(180deg); }
+    This avoids duplicating the full-size image asset.
+  -->
+  <defs>
+    <filter id="negative">
+      <feColorMatrix type="matrix"
+        values="-1  0  0  0  1
+                 0 -1  0  0  1
+                 0  0 -1  0  1
+                 0  0  0  1  0"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#07111f"/>
+</svg>

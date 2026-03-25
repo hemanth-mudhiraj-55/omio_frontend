@@ -1,14 +1,19 @@
 import heroBackgroundAsset from '../assets/heroBackground.png';
+import heroBackgroundDarkAsset from '../assets/heroBackgroundDark.svg';
+import caseStudy from '../assets/caseStudyBackground.png'
+import careerOppertunities from '../assets/careerOppertunities.png'
+import aboutUs from '../assets/aboutUs.png'
 
 export const imagePaths = {
   pageBackground: heroBackgroundAsset,
   heroBackground: heroBackgroundAsset,
+  heroBackgroundDark: heroBackgroundDarkAsset,
   navFeatured: {
     services: '',
-    insights: '',
+    insights: caseStudy,
     omio: '',
-    careers: '',
-    about: '',
+    careers: careerOppertunities,
+    about: aboutUs,
   },
   pageImages: {
     '/services/web-development': '',
