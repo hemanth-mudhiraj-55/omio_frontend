@@ -53,6 +53,11 @@ const insightItems = [
     path: '/insights/case-studies',
   },
   {
+    title: 'Articles',
+    description: 'In-depth reads on software startups, industry trends, and Omio\'s perspective on technology.',
+    path: '/insights/articles',
+  },
+  {
     title: 'Blogs',
     description: 'Thoughtful articles on product engineering, AI systems, and modern delivery practices.',
     path: '/insights/blogs',
@@ -227,7 +232,7 @@ export const homeHighlights = [
   },
 ];
 
-const createPage = ({ title, group, groupKey, intro, eyebrow, highlights = [], body = '', details = [] }) => ({
+const createPage = ({ title, group, groupKey, intro, eyebrow, highlights = [], body = '', details = [], links = [] }) => ({
   eyebrow,
   title,
   group,
@@ -236,6 +241,7 @@ const createPage = ({ title, group, groupKey, intro, eyebrow, highlights = [], b
   highlights,
   body,
   details,
+  links,
 });
 
 export const pageContent = {
@@ -407,6 +413,55 @@ export const pageContent = {
       {
         heading: 'Engagement Models',
         text: 'Short-term sprint support for specific delivery phases, extended project embedding for longer engagements, and team augmentation that scales with your roadmap. We structure every engagement around your delivery rhythm, not a generic contractor model. All placed engineers are vetted personally, not sourced from a database.',
+      },
+    ],
+  }),
+  '/insights/articles': createPage({
+    title: 'Articles',
+    group: 'Insights',
+    groupKey: 'insights',
+    eyebrow: 'Insights',
+    intro: 'Long-form reads on software startups, technology strategy, and Omio\'s perspective on the industry.',
+    highlights: ['Company deep-dives', 'Industry analysis', 'Startup strategy', 'SEO content', 'Technology trends'],
+    body: 'Our articles explore the topics that matter most to founders, product leaders, and technology teams. From understanding what Omio does to navigating the software startup landscape in India, each article is written to be genuinely useful — grounded in real practice, not recycled opinion.',
+    details: [
+      {
+        heading: 'What We Write About',
+        text: 'Company overviews, software startup strategy, vendor selection guides, and industry analysis. Articles are written by practitioners at Omio and reflect current thinking — not last year\'s consensus. Each piece is structured for both readability and search discoverability.',
+      },
+      {
+        heading: 'How Articles Differ from Blogs',
+        text: 'Blogs on Omio cover technical topics and engineering practice in depth. Articles are broader — addressing business strategy, market context, and decision frameworks for the leaders and founders who work with software companies. The two formats complement each other.',
+      },
+    ],
+    links: [
+      {
+        slug: 'what-is-omio',
+        title: 'What is Omio?',
+        intro: 'A complete overview of Omio Solutions — what the company does, how it works, and who it serves.',
+        category: 'Company',
+        readTime: '4 min read',
+      },
+      {
+        slug: 'software-company-startups-in-india',
+        title: 'Software Company Startups in India: What Founders Need to Know in 2025',
+        intro: 'Why startups in India are dominating global tech and what it takes to build and scale a software company in the Indian market.',
+        category: 'Industry',
+        readTime: '7 min read',
+      },
+      {
+        slug: 'how-to-choose-a-software-development-company',
+        title: 'How to Choose a Software Development Company: A Practical Guide',
+        intro: 'A step-by-step guide for product leaders selecting a software development partner — what to look for and what to avoid.',
+        category: 'Guide',
+        readTime: '6 min read',
+      },
+      {
+        slug: 'what-makes-a-software-startup-succeed-globally',
+        title: 'What Makes a Software Startup Succeed in the Global Market',
+        intro: 'The factors that separate software startups that scale internationally from those that plateau — engineering quality, specialisation, and partners.',
+        category: 'Startup Strategy',
+        readTime: '5 min read',
       },
     ],
   }),

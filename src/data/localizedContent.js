@@ -573,6 +573,16 @@ const navItemTranslations = {
       uk: 'Гнучка інженерна підтримка для delivery-команд, яким потрібен спеціалізований momentum.',
     },
   },
+  '/insights/articles': {
+    title: { en: 'Articles', de: 'Artikel', ja: '記事', pl: 'Artykuły', uk: 'Статті' },
+    description: {
+      en: "In-depth reads on software startups, industry trends, and Omio's perspective on technology.",
+      de: 'Ausführliche Artikel über Software-Startups, Branchentrends und Omios Technologieperspektive.',
+      ja: 'ソフトウェアスタートアップ、業界トレンド、Omioの技術的視点についての詳細な読み物。',
+      pl: 'Szczegółowe artykuły o startupach software, trendach branżowych i perspektywie Omio na technologię.',
+      uk: 'Детальні матеріали про software-стартапи, галузеві тренди та технологічну перспективу Omio.',
+    },
+  },
   '/insights/case-studies': {
     title: { en: 'Case Studies', de: 'Case Studies', ja: 'ケーススタディ', pl: 'Case Studies', uk: 'Кейси' },
     description: {

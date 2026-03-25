@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import SectionIntro from '../components/SectionIntro';
 import { useSite } from '../context/SiteContext';
 import { getLocalizedContent } from '../data/localizedContent';
@@ -52,6 +52,19 @@ function ContentPage() {
         <div className="content-highlights-grid">
           {page.highlights.map((highlight) => (
             <span key={highlight} className="content-highlight-chip">{highlight}</span>
+          ))}
+        </div>
+      )}
+
+      {page.links && page.links.length > 0 && (
+        <div className="content-article-list">
+          {page.links.map((link) => (
+            <Link key={link.slug} to={`/insights/articles/${link.slug}`} className="content-article-card">
+              <span className="content-article-category">{link.category}</span>
+              <h3>{link.title}</h3>
+              <p>{link.intro}</p>
+              <span className="content-article-read-time">{link.readTime}</span>
+            </Link>
           ))}
         </div>
       )}
