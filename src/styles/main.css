@@ -1680,3 +1680,109 @@ img { display: block; max-width: 100%; }
   color: var(--text-muted);
   margin-top: 4px;
 }
+
+/* ── Blog: highlight block ────────────────────────── */
+
+.blog-highlight {
+  background: var(--accent-wash, color-mix(in srgb, var(--accent) 10%, var(--surface)));
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 18px 24px;
+  margin: 28px 0;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.blog-highlight strong {
+  color: var(--accent-deep);
+}
+
+/* ── Blog: video placeholder block ───────────────── */
+
+.blog-video-placeholder {
+  margin: 32px 0;
+}
+
+.blog-video-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 260px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 40px 24px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.blog-video-frame p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.blog-video-frame small {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.blog-video-caption {
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ── Blog: links section block ────────────────────── */
+
+.blog-links-section {
+  margin: 36px 0;
+  padding: 24px 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.blog-links-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+
+.blog-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-links-list li {
+  padding: 0;
+}
+
+.blog-link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.15s;
+}
+
+.blog-link-item:hover {
+  text-decoration-color: var(--accent-deep);
+}

@@ -3,7 +3,7 @@ import heroBackgroundDarkAsset from '../assets/heroBackgroundDark.svg';
 import caseStudy from '../assets/caseStudyBackground.png'
 import careerOppertunities from '../assets/careerOppertunities.png'
 import aboutUs from '../assets/aboutUs.png'
-import webDev from '../assets/webDevelopment1.png'
+import webDev from '../assets/webDevelopment1.jpg'
 
 export const imagePaths = {
   pageBackground: heroBackgroundAsset,
