@@ -18,7 +18,15 @@ function VideoPlaceholder({ title, caption }) {
   );
 }
 
-function ImagePlaceholder({ alt, caption }) {
+function ImagePlaceholder({ alt, caption, src }) {
+  if (src) {
+    return (
+      <figure className="blog-image">
+        <img src={src} alt={alt} loading="lazy" width="800" height="450" />
+        {caption && <figcaption>{caption}</figcaption>}
+      </figure>
+    );
+  }
   return (
     <figure className="blog-image-placeholder">
       <div className="blog-image-placeholder__frame" role="img" aria-label={alt}>
@@ -55,7 +63,7 @@ function Block({ block }) {
         </ol>
       );
     case 'image':
-      return <ImagePlaceholder alt={block.alt} caption={block.caption} />;
+      return <ImagePlaceholder alt={block.alt} caption={block.caption} src={block.src} />;
     case 'callout':
       return <blockquote className="blog-callout">{block.text}</blockquote>;
     case 'highlight':
