@@ -81,10 +81,10 @@ export const contactChannels = [
 ];
 
 export const socialLinks = [
-  { key: 'linkedin', label: 'LinkedIn', url: '' },
-  { key: 'instagram', label: 'Instagram', url: '' },
-  { key: 'twitter', label: 'X / Twitter', url: '' },
-  { key: 'facebook', label: 'Facebook', url: '' },
+  { key: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/company/omio-software-solutions/' },
+  { key: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/omio_software_solutions/' },
+  { key: 'twitter', label: 'X / Twitter', url: 'https://x.com/OmioSoftwareSol' },
+  { key: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/people/OmiO-Software-Solutions/61576494333639/' },
 ];
 
 export const companyInfo = {
