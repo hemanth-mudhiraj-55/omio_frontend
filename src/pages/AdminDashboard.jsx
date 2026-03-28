@@ -93,7 +93,10 @@ export default function AdminDashboard() {
     <div className="admin-shell">
       {/* ── Topbar ── */}
       <div className="admin-topbar">
-        <div className="admin-topbar__brand">OmiO <span>Admin</span></div>
+        <div className="admin-topbar__brand">
+          <img src="/logo.svg" alt="OmiO Software Solutions logo" style={{ width: 28, height: 28 }} />
+          OmiO <span>Admin</span>
+        </div>
         <div className="admin-topbar__user">
           <span>{username}</span>
           <button className="admin-btn" onClick={logout}>Sign out</button>

@@ -20,6 +20,9 @@
   z-index: 10;
 }
 .admin-topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -292,6 +295,9 @@
   padding: 36px;
 }
 .admin-login-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.1rem;
   font-weight: 700;
   color: #e6edf3;
