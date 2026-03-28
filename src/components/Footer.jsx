@@ -56,7 +56,7 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Services</h4>
+          <h2 className="footer-heading">Services</h2>
           <Link to="/services/web-development">Web Development</Link>
           <Link to="/services/mobile-development">Mobile Development</Link>
           <Link to="/services/enterprise-ai-agents">Enterprise AI Agents</Link>
@@ -65,7 +65,7 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Company</h4>
+          <h2 className="footer-heading">Company</h2>
           <Link to="/about/who-we-are">Who We Are</Link>
           <Link to="/about/leadership">Leadership</Link>
           <Link to="/about/partners">Partners</Link>
@@ -74,7 +74,7 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h4>Resources</h4>
+          <h2 className="footer-heading">Resources</h2>
           <Link to="/insights/case-studies">Case Studies</Link>
           <Link to="/insights/blogs">Blog</Link>
           <Link to="/careers/benefits">Benefits</Link>

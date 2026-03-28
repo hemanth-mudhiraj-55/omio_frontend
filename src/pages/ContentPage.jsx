@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import SectionIntro from '../components/SectionIntro';
+import SeoHead from '../components/SeoHead';
 import { useSite } from '../context/SiteContext';
 import { getLocalizedContent } from '../data/localizedContent';
 import { imagePaths } from '../config/imagePaths';
@@ -14,6 +15,7 @@ function ContentPage() {
   if (!page) {
     return (
       <div className="page-stack">
+        <SeoHead title="Not Found" description="The page you are looking for does not exist." />
         <section className="content-hero">
           <SectionIntro eyebrow="Not Found" title={pathname} intro={common.contentBody} />
         </section>
@@ -23,12 +25,17 @@ function ContentPage() {
 
   return (
     <div className="page-stack">
+      <SeoHead
+        title={`${page.title} — ${page.group}`}
+        description={page.intro}
+      />
+
       <section className="content-hero">
         <SectionIntro eyebrow={page.eyebrow} title={page.title} intro={page.intro} />
       </section>
 
       <div className="content-page-visual">
-        {pageImage && <img src={pageImage} alt={page.title} />}
+        {pageImage && <img src={pageImage} alt={`${page.title} — Omio Solutions`} />}
       </div>
 
       {page.body && (
@@ -41,7 +48,7 @@ function ContentPage() {
         <div className="content-details-grid">
           {page.details.map((detail) => (
             <div key={detail.heading} className="content-detail-card">
-              <p className="section-eyebrow">{detail.heading}</p>
+              <h2 className="section-eyebrow">{detail.heading}</h2>
               <p>{detail.text}</p>
             </div>
           ))}

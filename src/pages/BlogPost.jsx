@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { getBlogPost } from '../data/blogPosts';
+import SeoHead from '../components/SeoHead';
 
 function VideoPlaceholder({ title, caption }) {
   return (
@@ -111,25 +112,16 @@ function BlogPost() {
 
   useEffect(() => {
     if (post) {
-      document.title = `${post.metaTitle}`;
-      let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.name = 'description';
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.content = post.metaDescription;
-
       const schema = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: post.title,
         description: post.metaDescription,
-        author: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omiosolutions.com' },
-        publisher: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omiosolutions.com' },
+        author: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omio.world' },
+        publisher: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omio.world', logo: { '@type': 'ImageObject', url: 'https://omio.world/logo.svg' } },
         datePublished: post.publishDate,
         keywords: post.tags ? post.tags.join(', ') : '',
-        url: `https://omiosolutions.com${post.path}`,
+        url: `https://omio.world${post.path}`,
       };
       let schemaScript = document.getElementById('blog-jsonld');
       if (!schemaScript) {
@@ -141,7 +133,6 @@ function BlogPost() {
       schemaScript.textContent = JSON.stringify(schema);
     }
     return () => {
-      document.title = 'Omio Solutions';
       const schemaScript = document.getElementById('blog-jsonld');
       if (schemaScript) schemaScript.remove();
     };
@@ -151,6 +142,7 @@ function BlogPost() {
 
   return (
     <article className="blog-post" itemScope itemType="https://schema.org/BlogPosting">
+      <SeoHead title={post.metaTitle.replace(' | Omio Solutions', '')} description={post.metaDescription} type="article" />
       <meta itemProp="datePublished" content={post.publishDate} />
       <meta itemProp="author" content="Omio Solutions" />
 
@@ -210,7 +202,7 @@ function BlogPost() {
       <footer className="blog-footer">
         <div className="blog-footer__inner">
           <p>Want to work with a team that thinks this carefully about delivery?</p>
-          <a className="contact-button" href="mailto:hello@omiosolutions.com">
+          <a className="contact-button" href="mailto:hello@omio.world">
             Talk to Omio Solutions
           </a>
         </div>

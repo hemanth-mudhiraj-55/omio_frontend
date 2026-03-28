@@ -80,7 +80,7 @@ function Navbar() {
             className="language-selector"
             value={language}
             onChange={(event) => setLanguage(event.target.value)}
-            aria-label="Language selector"
+            aria-label="Select language"
           >
             {supportedLanguages.map((lang) => (
               <option key={lang.code} value={lang.code}>{lang.label}</option>
@@ -90,7 +90,7 @@ function Navbar() {
             className="theme-toggle"
             type="button"
             onClick={toggleTheme}
-            aria-label={theme === 'light' ? common.dark : common.light}
+            aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
           >
             <ThemeIcon theme={theme} />
           </button>
@@ -103,7 +103,7 @@ function Navbar() {
             className="theme-toggle"
             type="button"
             onClick={toggleTheme}
-            aria-label={theme === 'light' ? common.dark : common.light}
+            aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
           >
             <ThemeIcon theme={theme} />
           </button>
@@ -153,7 +153,7 @@ function Navbar() {
         <div className="mega-card">
           <div className="mega-card-visual">
             {featuredImage ? (
-              <img src={featuredImage} alt="" />
+              <img src={featuredImage} alt={`${currentGroup.label} — featured visual`} />
             ) : (
               <div className="mega-card-placeholder">
                 <span>{common.featuredVisualPlaceholder}</span>
@@ -210,7 +210,7 @@ function Navbar() {
             className="language-selector"
             value={language}
             onChange={(event) => setLanguage(event.target.value)}
-            aria-label="Language selector"
+            aria-label="Select language"
           >
             {supportedLanguages.map((lang) => (
               <option key={lang.code} value={lang.code}>{lang.label}</option>

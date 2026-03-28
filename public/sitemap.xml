@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://omio.world/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://omio.world/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://omio.world/about/who-we-are</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/omio-solutions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Services -->
+  <url><loc>https://omio.world/services/web-development</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/services/mobile-development</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/services/cloud-devops-custom-integration</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/services/ai-agent-evaluation-benchmarking</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/services/enterprise-ai-agents</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/services/agent-readiness-risk-assessment</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/services/continuous-monitoring-regression-testing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/services/sft-rlhf</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/services/staffing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Insights -->
+  <url><loc>https://omio.world/insights/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/blogs</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/insights/articles</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://omio.world/insights/blogs/enterprise-ai-agents</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/blogs/ai-agent-evaluation-benchmarking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/blogs/web-development</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/articles/what-is-omio</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/articles/software-company-startups-in-india</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/articles/how-to-choose-a-software-development-company</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/insights/articles/what-makes-a-software-startup-succeed-globally</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Careers -->
+  <url><loc>https://omio.world/careers/life-at-omio</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://omio.world/careers/open-positions</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://omio.world/careers/benefits</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://omio.world/careers/professional-development</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- About -->
+  <url><loc>https://omio.world/about/leadership</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://omio.world/about/partners</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://omio.world/about/location</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

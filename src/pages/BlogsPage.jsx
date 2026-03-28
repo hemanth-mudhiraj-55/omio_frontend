@@ -1,15 +1,15 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogPosts';
+import SeoHead from '../components/SeoHead';
 
 function BlogsPage() {
-  useEffect(() => {
-    document.title = 'Blogs — Insights | Omio Solutions';
-    return () => { document.title = 'Omio Solutions'; };
-  }, []);
-
   return (
     <div className="page-stack">
+      <SeoHead
+        title="Blog"
+        description="Thoughtful long-form writing on AI systems, enterprise agents, engineering strategy, and modern delivery practices — written by the Omio Solutions team."
+      />
+
       <header className="content-hero">
         <p className="section-eyebrow">Insights</p>
         <h1>Blogs</h1>
@@ -20,7 +20,7 @@ function BlogsPage() {
       </header>
 
       <section className="blogs-grid" aria-label="Blog posts">
-        {blogPosts.map((post, index) => (
+        {blogPosts.map((post) => (
           <Link
             key={post.slug}
             to={post.path}

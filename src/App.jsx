@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import SiteLayout from './components/SiteLayout';
 import HomePage from './pages/HomePage';
@@ -11,6 +11,10 @@ import AboutPage from './pages/AboutPage';
 import { darkColors, lightColors } from './config/theme';
 import { useSite } from './context/SiteContext';
 import { routeOrder } from './data/siteContent';
+
+// Lazy-load admin pages — they are rarely visited and reduce initial bundle
+const AdminLogin = lazy(() => import('./pages/AdminLogin'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 
 function App() {
   const { theme } = useSite();
@@ -28,6 +32,11 @@ function App() {
 
   return (
     <Routes>
+      {/* ── Admin (no site chrome, lazy-loaded) ── */}
+      <Route path="/admin/login" element={<Suspense fallback={null}><AdminLogin /></Suspense>} />
+      <Route path="/admin" element={<Suspense fallback={null}><AdminDashboard /></Suspense>} />
+
+      {/* ── Public site ── */}
       <Route element={<SiteLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/insights/blogs" element={<BlogsPage />} />

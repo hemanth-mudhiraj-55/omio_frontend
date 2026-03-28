@@ -1,5 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { contactChannels, socialLinks, companyInfo } from '../data/links';
+import { API_BASE } from '../config/api';
+import SeoHead from '../components/SeoHead';
 
 const socialIcons = {
   linkedin: (
@@ -74,14 +76,168 @@ const icons = {
   ),
 };
 
-function ContactPage() {
-  useEffect(() => {
-    document.title = 'Contact | Omio Solutions';
-    return () => { document.title = 'Omio Solutions'; };
-  }, []);
+const INITIAL_FORM = { name: '', email: '', channel: 'general', subject: '', message: '' };
+
+function ContactForm() {
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [errMsg, setErrMsg] = useState('');
+
+  const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrMsg('');
+
+    // Client-side validation before sending
+    const trimmed = {
+      name: form.name.trim(),
+      email: form.email.trim(),
+      channel: form.channel,
+      subject: form.subject.trim(),
+      message: form.message.trim(),
+    };
+    if (!trimmed.name || !trimmed.email || !trimmed.message) {
+      setErrMsg('Please fill in all required fields.');
+      setStatus('error');
+      return;
+    }
+    if (trimmed.name.length > 200 || trimmed.message.length > 5000) {
+      setErrMsg('Input is too long.');
+      setStatus('error');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed.email)) {
+      setErrMsg('Please enter a valid email address.');
+      setStatus('error');
+      return;
+    }
+
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(trimmed),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Submission failed');
+      setStatus('success');
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      setErrMsg(err.message);
+      setStatus('error');
+    }
+  };
+
+  if (status === 'success') {
+    return (
+      <div className="contact-form-success">
+        <div className="contact-form-success__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h3>Message sent</h3>
+        <p>We received your message and will respond within one business day.</p>
+        <button className="contact-form-submit" onClick={() => setStatus('idle')}>Send another</button>
+      </div>
+    );
+  }
 
   return (
+    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+      <div className="contact-form__row">
+        <div className="contact-form__field">
+          <label htmlFor="cf-name">Full name <span aria-hidden="true">*</span></label>
+          <input
+            id="cf-name"
+            name="name"
+            type="text"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Jane Smith"
+            required
+            autoComplete="name"
+            maxLength={200}
+          />
+        </div>
+        <div className="contact-form__field">
+          <label htmlFor="cf-email">Email address <span aria-hidden="true">*</span></label>
+          <input
+            id="cf-email"
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="jane@company.com"
+            required
+            autoComplete="email"
+            maxLength={320}
+          />
+        </div>
+      </div>
+
+      <div className="contact-form__row">
+        <div className="contact-form__field">
+          <label htmlFor="cf-channel">Topic</label>
+          <select id="cf-channel" name="channel" value={form.channel} onChange={handleChange}>
+            {contactChannels.map(c => (
+              <option key={c.key} value={c.key}>{c.label}</option>
+            ))}
+          </select>
+        </div>
+        <div className="contact-form__field">
+          <label htmlFor="cf-subject">Subject <span className="contact-form__optional">(optional)</span></label>
+          <input
+            id="cf-subject"
+            name="subject"
+            type="text"
+            value={form.subject}
+            onChange={handleChange}
+            placeholder="Brief topic"
+            maxLength={500}
+          />
+        </div>
+      </div>
+
+      <div className="contact-form__field">
+        <label htmlFor="cf-message">Message <span aria-hidden="true">*</span></label>
+        <textarea
+          id="cf-message"
+          name="message"
+          value={form.message}
+          onChange={handleChange}
+          placeholder="Tell us what you need…"
+          rows={5}
+          required
+          maxLength={5000}
+        />
+      </div>
+
+      {status === 'error' && (
+        <p className="contact-form__error" role="alert">{errMsg}</p>
+      )}
+
+      <button
+        type="submit"
+        className="contact-form-submit"
+        disabled={status === 'loading'}
+      >
+        {status === 'loading' ? 'Sending…' : 'Send message'}
+      </button>
+    </form>
+  );
+}
+
+function ContactPage() {
+  return (
     <div className="page-stack">
+      <SeoHead
+        title="Contact"
+        description="Get in touch with Omio Solutions. Reach our sales, support, consulting, partnerships, or careers team. We respond within one business day."
+      />
 
       {/* ── Hero ──────────────────────────── */}
       <header className="content-hero contact-hero">
@@ -107,7 +263,7 @@ function ContactPage() {
             </div>
             <div className="contact-card__body">
               <p className="contact-card__category">{channel.label}</p>
-              <h2 className="contact-card__tagline">{channel.tagline}</h2>
+              <h3 className="contact-card__tagline">{channel.tagline}</h3>
               <p className="contact-card__description">{channel.description}</p>
             </div>
             <div className="contact-card__email">
@@ -118,6 +274,20 @@ function ContactPage() {
             </div>
           </a>
         ))}
+      </section>
+
+      {/* ── Direct message form ───────────── */}
+      <section className="contact-form-section" aria-label="Send a message">
+        <div className="contact-form-section__header">
+          <p className="section-eyebrow">Direct message</p>
+          <h2>Write to us directly</h2>
+          <p className="contact-form-section__sub">
+            Prefer a form? Fill this in and we will route it to the right person.
+          </p>
+        </div>
+        <div className="contact-form-wrap">
+          <ContactForm />
+        </div>
       </section>
 
       {/* ── Info strip ────────────────────── */}

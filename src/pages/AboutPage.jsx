@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { companyInfo } from '../data/links';
+import SeoHead from '../components/SeoHead';
 
 const values = [
   {
@@ -43,13 +43,12 @@ const stats = [
 ];
 
 function AboutPage() {
-  useEffect(() => {
-    document.title = 'Who We Are | Omio Solutions';
-    return () => { document.title = 'Omio Solutions'; };
-  }, []);
-
   return (
     <div className="page-stack">
+      <SeoHead
+        title="Who We Are"
+        description="Omio Solutions is a technology services company focused on product engineering, enterprise AI, and operational delivery. Learn about our mission, values, and team."
+      />
 
       {/* ── Hero ──────────────────────────── */}
       <header className="about-hero">

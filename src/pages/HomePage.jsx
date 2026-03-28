@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { imagePaths } from '../config/imagePaths';
 import { useSite } from '../context/SiteContext';
 import { getLocalizedContent } from '../data/localizedContent';
+import SeoHead from '../components/SeoHead';
 
 function HomePage() {
   const { language } = useSite();
@@ -20,10 +21,18 @@ function HomePage() {
 
   return (
     <div className="page-stack">
+      <SeoHead
+        description="Omio Solutions delivers enterprise-grade software engineering, AI agent evaluation, cloud DevOps, and staffing. Build intelligent systems with calm, precise execution."
+      />
 
       <section className="hero-section">
         {imagePaths.heroBackground && (
-          <img className="hero-bg" src={imagePaths.heroBackground} alt="" aria-hidden="true" />
+          <img
+            className="hero-bg"
+            src={imagePaths.heroBackground}
+            alt="Omio Solutions hero background — abstract technology visual"
+            fetchPriority="high"
+          />
         )}
         <div className="hero-panel">
           <div className="hero-copy">
