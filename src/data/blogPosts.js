@@ -6,9 +6,9 @@ export const blogPosts = [
     slug: 'enterprise-ai-and-automation',
     path: '/insights/blogs/enterprise-ai-and-automation',
     title: 'Enterprise AI & Automation: The Complete Guide to Intelligent Automation at Scale',
-    metaTitle: 'Enterprise AI & Automation: Complete Guide 2026 | Omio Solutions',
+    metaTitle: 'Enterprise AI & Automation: Complete Guide 2026 | OmiO Software Solutions',
     metaDescription:
-      'Learn how enterprise AI & automation agents work, where they create real value, and how to implement them without the usual pitfalls. A practical, no-nonsense guide from Omio Solutions.',
+      'Learn how enterprise AI & automation agents work, where they create real value, and how to implement them without the usual pitfalls. A practical, no-nonsense guide from OmiO Software Solutions.',
     publishDate: 'March 24, 2026',
     readTime: '22 min read',
     category: 'AI & Automation',
@@ -657,8 +657,8 @@ export const blogPosts = [
           { href: '/insights/blogs/ai-agent-evaluation-benchmarking', text: 'AI Agent Evaluation and Benchmarking: A Practical Framework', external: false },
           { href: '/insights/blogs/build-vs-buy-enterprise-software', text: 'Build vs Buy: How to Make the Right Call for Your Team', external: false },
           { href: '/insights/blogs/technical-debt-real-cost', text: 'Technical Debt: The Real Cost and How to Fix It', external: false },
-          { href: '/insights/articles/what-is-omio', text: 'What Is Omio? How We Build AI & Automation Solutions', external: false },
-          { href: '/contact', text: 'Work with Omio Solutions on your AI & Automation program', external: false },
+          { href: '/insights/articles/what-is-omio', text: 'What Is OmiO? How We Build AI & Automation Solutions', external: false },
+          { href: '/contact', text: 'Work with OmiO Software Solutions on your AI & Automation program', external: false },
         ],
       },
 
@@ -826,9 +826,9 @@ export const blogPosts = [
     slug: 'ai-benchmarking-and-agent-evaluation',
     path: '/insights/blogs/ai-benchmarking-and-agent-evaluation',
     title: 'AI Benchmarking & Agent Evaluation: A Complete Guide for Enterprise Teams',
-    metaTitle: 'AI Benchmarking & Agent Evaluation: Complete Guide 2026 | Omio Solutions',
+    metaTitle: 'AI Benchmarking & Agent Evaluation: Complete Guide 2026 | OmiO Software Solutions',
     metaDescription:
-      'Learn AI benchmarking best practices, which AI agent benchmarking frameworks to use, and how to build an evaluation pipeline that catches real problems before production. Omio Solutions.',
+      'Learn AI benchmarking best practices, which AI agent benchmarking frameworks to use, and how to build an evaluation pipeline that catches real problems before production. OmiO Software Solutions.',
     publishDate: 'March 24, 2026',
     readTime: '18 min read',
     category: 'AI & Automation',
@@ -1299,7 +1299,7 @@ export const blogPosts = [
       },
       {
         type: 'p',
-        text: 'An AI ROI benchmarking study by Omio Solutions found that well-scoped first deployments show positive ROI within 60 to 90 days. The key phrase is well-scoped. Broad, poorly-defined deployments take much longer.',
+        text: 'An AI ROI benchmarking study by OmiO Software Solutions found that well-scoped first deployments show positive ROI within 60 to 90 days. The key phrase is well-scoped. Broad, poorly-defined deployments take much longer.',
       },
       {
         type: 'p',
@@ -1394,12 +1394,12 @@ export const blogPosts = [
           { href: '/insights/blogs/build-vs-buy-enterprise-software', text: 'Build vs Buy: How to Make the Right Call', external: false },
           { href: '/insights/blogs/technical-debt-real-cost', text: 'Technical Debt: The Real Cost and How to Fix It', external: false },
           { href: '/insights/blogs/web-development', text: 'Web Development in 2026: Modern Stacks and Best Practices', external: false },
-          { href: '/insights/articles/what-is-omio', text: 'What Is Omio Solutions?', external: false },
+          { href: '/insights/articles/what-is-omio', text: 'What Is OmiO Software Solutions?', external: false },
           { href: '/insights/articles/software-company-startups-in-india', text: 'Software Company Startups in India', external: false },
           { href: '/insights/articles/how-to-choose-a-software-development-company', text: 'How to Choose a Software Development Company', external: false },
           { href: '/insights/articles/what-makes-a-software-startup-succeed-globally', text: 'What Makes a Software Startup Succeed Globally', external: false },
           { href: '/services/enterprise-ai-agents', text: 'Our Enterprise AI Agent Services', external: false },
-          { href: '/contact', text: 'Talk to Omio Solutions About AI Benchmarking', external: false },
+          { href: '/contact', text: 'Talk to OmiO Software Solutions About AI Benchmarking', external: false },
         ],
       },
 
@@ -1461,7 +1461,7 @@ export const blogPosts = [
     slug: 'web-development',
     path: '/insights/blogs/web-development',
     title: 'Web Development in 2025: Modern Stacks, Real Performance, and What Actually Ships',
-    metaTitle: 'Web Development Guide 2025: Stacks, Performance & Best Practices | Omio Solutions',
+    metaTitle: 'Web Development Guide 2025: Stacks, Performance & Best Practices | OmiO Software Solutions',
     metaDescription:
       'The practical web development guide for 2025 — modern stacks, performance engineering, security fundamentals, and what separates projects that ship from ones that stall.',
     publishDate: 'March 24, 2026',

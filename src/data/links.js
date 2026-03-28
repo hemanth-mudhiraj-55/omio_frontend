@@ -38,7 +38,7 @@ export const contactChannels = [
     label: 'Expert Community',
     email: 'community@omio.world',
     icon: 'users',
-    tagline: 'Join the Omio builder network',
+    tagline: 'Join the OmiO builder network',
     description:
       'Connect with our network of engineers, AI researchers, and product specialists. Share knowledge, collaborate on open problems, and stay close to the craft.',
   },
@@ -58,7 +58,7 @@ export const contactChannels = [
     icon: 'newspaper',
     tagline: 'Press, interviews, and brand inquiries',
     description:
-      'Journalist inquiries, interview requests, speaking opportunities, brand asset requests, and anything related to public communications about Omio.',
+      'Journalist inquiries, interview requests, speaking opportunities, brand asset requests, and anything related to public communications about OmiO.',
   },
   {
     key: 'careers',
@@ -67,7 +67,7 @@ export const contactChannels = [
     icon: 'star',
     tagline: 'Join the team',
     description:
-      'Applications, spontaneous CVs, internship enquiries, and questions about working at Omio. We read every message from people who care about the craft.',
+      'Applications, spontaneous CVs, internship enquiries, and questions about working at OmiO. We read every message from people who care about the craft.',
   },
   {
     key: 'general',
@@ -83,13 +83,13 @@ export const contactChannels = [
 export const socialLinks = [
   { key: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/company/omio-software-solutions/' },
   { key: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/omio_software_solutions/' },
-  { key: 'twitter', label: 'X / Twitter', url: 'https://x.com/OmioSoftwareSol' },
+  { key: 'twitter', label: 'X / Twitter', url: 'https://x.com/OmiOSoftwareSol' },
   { key: 'facebook', label: 'Facebook', url: 'https://www.facebook.com/people/OmiO-Software-Solutions/61576494333639/' },
 ];
 
 export const companyInfo = {
-  name: 'Omio Solutions',
-  legalName: 'Omio Solutions Ltd.',
+  name: 'OmiO Software Solutions',
+  legalName: 'OmiO Solutions Ltd.',
   founded: '2023',
   headquarters: 'Global — remote-first',
   website: 'https://omio.world',

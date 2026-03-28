@@ -93,7 +93,7 @@ export default function AdminDashboard() {
     <div className="admin-shell">
       {/* ── Topbar ── */}
       <div className="admin-topbar">
-        <div className="admin-topbar__brand">Omio <span>Admin</span></div>
+        <div className="admin-topbar__brand">OmiO <span>Admin</span></div>
         <div className="admin-topbar__user">
           <span>{username}</span>
           <button className="admin-btn" onClick={logout}>Sign out</button>
@@ -230,7 +230,7 @@ export default function AdminDashboard() {
 
                 <div className="admin-detail__actions">
                   <a
-                    href={`mailto:${selected.email}?subject=Re: ${encodeURIComponent(selected.subject || 'Your message to Omio')}`}
+                    href={`mailto:${selected.email}?subject=Re: ${encodeURIComponent(selected.subject || 'Your message to OmiO')}`}
                     className="admin-btn admin-btn--primary"
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>

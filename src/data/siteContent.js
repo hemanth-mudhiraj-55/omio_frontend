@@ -49,12 +49,12 @@ const serviceItems = [
 const insightItems = [
   {
     title: 'Case Studies',
-    description: 'Real delivery stories that show how Omio turns technical ambition into operational results.',
+    description: 'Real delivery stories that show how OmiO turns technical ambition into operational results.',
     path: '/insights/case-studies',
   },
   {
     title: 'Articles',
-    description: 'In-depth reads on software startups, industry trends, and Omio\'s perspective on technology.',
+    description: 'In-depth reads on software startups, industry trends, and OmiO\'s perspective on technology.',
     path: '/insights/articles',
   },
   {
@@ -66,7 +66,7 @@ const insightItems = [
 
 const careerItems = [
   {
-    title: 'Life at Omio',
+    title: 'Life at OmiO',
     description: 'A look at how the team works, collaborates, and grows together.',
     path: '/careers/life-at-omio',
   },
@@ -90,7 +90,7 @@ const careerItems = [
 const aboutItems = [
   {
     title: 'Who We Are',
-    description: 'The story, values, and operating mindset behind Omio Solutions.',
+    description: 'The story, values, and operating mindset behind OmiO Software Solutions.',
     path: '/about/who-we-are',
   },
   {
@@ -100,12 +100,12 @@ const aboutItems = [
   },
   {
     title: 'Partners',
-    description: 'Collaborators and ecosystem relationships that expand what Omio can deliver.',
+    description: 'Collaborators and ecosystem relationships that expand what OmiO can deliver.',
     path: '/about/partners',
   },
   {
     title: 'Location',
-    description: 'Where the team operates and how Omio works with clients across regions.',
+    description: 'Where the team operates and how OmiO works with clients across regions.',
     path: '/about/location',
   },
 ];
@@ -118,7 +118,7 @@ export const navigationGroups = [
     description: 'Engineering, AI delivery, and platform acceleration services.',
     featuredTitle: 'Build systems that stay elegant as they scale.',
     featuredDescription:
-      'From product engineering to enterprise AI, Omio combines clean execution with dependable delivery.',
+      'From product engineering to enterprise AI, OmiO combines clean execution with dependable delivery.',
     items: serviceItems,
   },
   {
@@ -133,15 +133,15 @@ export const navigationGroups = [
   },
   {
     key: 'omio',
-    label: 'Omio',
+    label: 'OmiO',
     path: '/omio-solutions',
-    description: 'The core Omio story and positioning.',
+    description: 'The core OmiO story and positioning.',
     featuredTitle: 'Technology that feels carefully considered.',
     featuredDescription:
       'A premium digital presence for a software services brand centered on craft and intelligence.',
     items: [
       {
-        title: 'Omio Solutions',
+        title: 'OmiO Software Solutions',
         description: 'A concise overview page that anchors the company narrative.',
         path: '/omio-solutions',
       },
@@ -161,7 +161,7 @@ export const navigationGroups = [
     key: 'about',
     label: 'About us',
     path: '/about/who-we-are',
-    description: 'Who Omio is, how the team works, and where it is headed.',
+    description: 'Who OmiO is, how the team works, and where it is headed.',
     featuredTitle: 'A clear point of view, expressed simply.',
     featuredDescription:
       'The about section is broken into dedicated pages so every topic can grow without crowding.',
@@ -178,7 +178,7 @@ export const supportedLanguages = [
 ];
 
 export const heroContent = {
-  eyebrow: 'Omio Solutions',
+  eyebrow: 'OmiO Software Solutions',
   titleLines: [
     { text: 'Think behind', tone: 'muted' },
     { text: 'the', tone: 'light' },
@@ -201,7 +201,7 @@ export const homePillars = [
     eyebrow: 'Product Engineering',
     title: 'Build premium digital products without losing delivery speed.',
     description:
-      'Omio combines frontend craft, backend reliability, and platform thinking so every launch feels deliberate.',
+      'OmiO combines frontend craft, backend reliability, and platform thinking so every launch feels deliberate.',
   },
   {
     eyebrow: 'Applied AI',
@@ -421,24 +421,24 @@ export const pageContent = {
     group: 'Insights',
     groupKey: 'insights',
     eyebrow: 'Insights',
-    intro: 'Long-form reads on software startups, technology strategy, and Omio\'s perspective on the industry.',
+    intro: 'Long-form reads on software startups, technology strategy, and OmiO\'s perspective on the industry.',
     highlights: ['Company deep-dives', 'Industry analysis', 'Startup strategy', 'SEO content', 'Technology trends'],
-    body: 'Our articles explore the topics that matter most to founders, product leaders, and technology teams. From understanding what Omio does to navigating the software startup landscape in India, each article is written to be genuinely useful — grounded in real practice, not recycled opinion.',
+    body: 'Our articles explore the topics that matter most to founders, product leaders, and technology teams. From understanding what OmiO does to navigating the software startup landscape in India, each article is written to be genuinely useful — grounded in real practice, not recycled opinion.',
     details: [
       {
         heading: 'What We Write About',
-        text: 'Company overviews, software startup strategy, vendor selection guides, and industry analysis. Articles are written by practitioners at Omio and reflect current thinking — not last year\'s consensus. Each piece is structured for both readability and search discoverability.',
+        text: 'Company overviews, software startup strategy, vendor selection guides, and industry analysis. Articles are written by practitioners at OmiO and reflect current thinking — not last year\'s consensus. Each piece is structured for both readability and search discoverability.',
       },
       {
         heading: 'How Articles Differ from Blogs',
-        text: 'Blogs on Omio cover technical topics and engineering practice in depth. Articles are broader — addressing business strategy, market context, and decision frameworks for the leaders and founders who work with software companies. The two formats complement each other.',
+        text: 'Blogs on OmiO cover technical topics and engineering practice in depth. Articles are broader — addressing business strategy, market context, and decision frameworks for the leaders and founders who work with software companies. The two formats complement each other.',
       },
     ],
     links: [
       {
         slug: 'what-is-omio',
-        title: 'What is Omio?',
-        intro: 'A complete overview of Omio Solutions — what the company does, how it works, and who it serves.',
+        title: 'What is OmiO?',
+        intro: 'A complete overview of OmiO Software Solutions — what the company does, how it works, and who it serves.',
         category: 'Company',
         readTime: '4 min read',
       },
@@ -470,7 +470,7 @@ export const pageContent = {
     group: 'Insights',
     groupKey: 'insights',
     eyebrow: 'Insights',
-    intro: 'Real delivery stories that show how Omio turns technical ambition into operational results.',
+    intro: 'Real delivery stories that show how OmiO turns technical ambition into operational results.',
     highlights: ['Project snapshots', 'Results framing', 'Client outcomes', 'Technical decisions', 'Before & after metrics'],
     body: 'Outcome-focused narratives from real engagements — documenting the problem, the approach, the decisions made under constraint, and the measurable results. These are stories written by the people who did the work, not summaries cleaned up for marketing.',
     details: [
@@ -491,7 +491,7 @@ export const pageContent = {
     eyebrow: 'Insights',
     intro: 'Practical writing on AI systems, product engineering, and modern delivery from the people doing the work.',
     highlights: ['Thought leadership', 'Technical essays', 'Company perspective', 'AI operations', 'Engineering culture', 'Delivery practices'],
-    body: 'Technical and strategic writing from practitioners at Omio. Articles are grounded in real experience — problems we have encountered, approaches we have tested, and patterns that have held up under production conditions. No recycled content or theoretical takes.',
+    body: 'Technical and strategic writing from practitioners at OmiO. Articles are grounded in real experience — problems we have encountered, approaches we have tested, and patterns that have held up under production conditions. No recycled content or theoretical takes.',
     details: [
       {
         heading: 'Topics We Cover',
@@ -499,37 +499,37 @@ export const pageContent = {
       },
       {
         heading: 'Who Writes Here',
-        text: 'Engineers, consultants, and product specialists from across the Omio team. Every article goes through a technical review before publication to ensure accuracy. We write about topics we are actively working on, which means the content reflects current practice rather than last year\'s consensus.',
+        text: 'Engineers, consultants, and product specialists from across the OmiO team. Every article goes through a technical review before publication to ensure accuracy. We write about topics we are actively working on, which means the content reflects current practice rather than last year\'s consensus.',
       },
     ],
   }),
   '/omio-solutions': createPage({
-    title: 'Omio Solutions',
-    group: 'Omio',
+    title: 'OmiO Software Solutions',
+    group: 'OmiO',
     groupKey: 'omio',
-    eyebrow: 'Omio',
+    eyebrow: 'OmiO',
     intro: 'Enterprise-grade software services built around intelligent systems, precise delivery, and long-term thinking.',
     highlights: ['Brand overview', 'Positioning', 'Company narrative', 'Service philosophy', 'Core values'],
-    body: 'Omio Solutions is a technology services company founded on the belief that the best software work happens when craft and communication are treated as equally important as technical capability. We are a team of engineers, AI practitioners, and delivery specialists who take both the work and the relationship seriously.',
+    body: 'OmiO Software Solutions is a technology services company founded on the belief that the best software work happens when craft and communication are treated as equally important as technical capability. We are a team of engineers, AI practitioners, and delivery specialists who take both the work and the relationship seriously.',
     details: [
       {
         heading: 'The Service Model',
         text: 'We operate as a delivery partner, not a vendor. Engagements are structured around clear goals, transparent progress reporting, and shared accountability for outcomes — not hours logged or scope argued over. Senior practitioners remain hands-on throughout the project, not just at the start. When things get complicated, the most experienced people get closer, not further away.',
       },
       {
-        heading: 'Why Omio',
+        heading: 'Why OmiO',
         text: 'We combine the engineering depth of a specialist consultancy with the operational structure of a professional services firm. Clients work directly with the people doing the work, get honest assessments of what is technically feasible, and receive guidance that is in their interest — even when that means recommending against a larger engagement. That is how we build relationships that last.',
       },
     ],
   }),
   '/careers/life-at-omio': createPage({
-    title: 'Life at Omio',
+    title: 'Life at OmiO',
     group: 'Careers',
     groupKey: 'careers',
     eyebrow: 'Careers',
     intro: 'A remote-first team where high performance and sustainable working conditions are treated as complementary.',
     highlights: ['Culture story', 'Team rituals', 'Ways of working', 'Remote-first', 'Async communication', 'Psychological safety'],
-    body: 'Omio is a distributed team that works asynchronously without losing coherence. We have built deliberate structures around communication, delivery, and culture so that being remote does not mean being disconnected — from the work, from teammates, or from the overall direction of the company.',
+    body: 'OmiO is a distributed team that works asynchronously without losing coherence. We have built deliberate structures around communication, delivery, and culture so that being remote does not mean being disconnected — from the work, from teammates, or from the overall direction of the company.',
     details: [
       {
         heading: 'How We Work',
@@ -548,7 +548,7 @@ export const pageContent = {
     eyebrow: 'Careers',
     intro: 'We hire deliberately — people who care about craft and want to work on technically interesting problems.',
     highlights: ['Role listings', 'Hiring flow', 'Department snapshots', 'Engineering roles', 'AI & ML roles', 'Operations roles'],
-    body: 'Omio hires slowly and with intention. We are looking for people who have strong technical foundations, communicate clearly, and bring a genuine point of view to the work — not people who just clear the interview bar. Every hire has a real impact on the team because the team is small enough for that to be true.',
+    body: 'OmiO hires slowly and with intention. We are looking for people who have strong technical foundations, communicate clearly, and bring a genuine point of view to the work — not people who just clear the interview bar. Every hire has a real impact on the team because the team is small enough for that to be true.',
     details: [
       {
         heading: 'Current Focus Areas',
@@ -567,7 +567,7 @@ export const pageContent = {
     eyebrow: 'Careers',
     intro: 'Compensation and support structures designed for people doing serious, sustained work.',
     highlights: ['Competitive pay', 'Learning budget', 'Flexible hours', 'Home office stipend', 'Health coverage', 'Generous leave'],
-    body: 'Omio\'s benefits are designed around the reality of remote, knowledge-intensive work. We provide the tools, autonomy, and support structures that help people do their best work over the long term — not just perks that look good on a careers page but rarely get used.',
+    body: 'OmiO\'s benefits are designed around the reality of remote, knowledge-intensive work. We provide the tools, autonomy, and support structures that help people do their best work over the long term — not just perks that look good on a careers page but rarely get used.',
     details: [
       {
         heading: 'Core Benefits',
@@ -584,9 +584,9 @@ export const pageContent = {
     group: 'Careers',
     groupKey: 'careers',
     eyebrow: 'Careers',
-    intro: 'Learning and growth at Omio is funded, structured, and taken seriously by leadership.',
+    intro: 'Learning and growth at OmiO is funded, structured, and taken seriously by leadership.',
     highlights: ['Learning budget', 'Conference access', 'Internal mentoring', 'Growth frameworks', 'Promotion criteria', 'External courses'],
-    body: 'We invest in the development of every team member because we believe it makes the work better, the team more capable, and the company more resilient. Development at Omio is not a once-a-year performance review — it is an ongoing conversation with real resources behind it.',
+    body: 'We invest in the development of every team member because we believe it makes the work better, the team more capable, and the company more resilient. Development at OmiO is not a once-a-year performance review — it is an ongoing conversation with real resources behind it.',
     details: [
       {
         heading: 'Learning Programs',
@@ -605,7 +605,7 @@ export const pageContent = {
     eyebrow: 'About',
     intro: 'A team of engineers and strategists who take technical excellence and business impact equally seriously.',
     highlights: ['Mission', 'Values', 'Operating philosophy', 'Company history', 'Team composition'],
-    body: 'Omio Solutions was founded on a simple premise — that the best software work happens when craftsmanship and communication are both treated as non-negotiable. We are a small, senior team with broad capability across product engineering, AI delivery, infrastructure, and strategic advisory.',
+    body: 'OmiO Software Solutions was founded on a simple premise — that the best software work happens when craftsmanship and communication are both treated as non-negotiable. We are a small, senior team with broad capability across product engineering, AI delivery, infrastructure, and strategic advisory.',
     details: [
       {
         heading: 'Our Mission',
@@ -624,11 +624,11 @@ export const pageContent = {
     eyebrow: 'About',
     intro: 'Experienced practitioners who stay close to the work and lead by example rather than by title.',
     highlights: ['Leadership bios', 'Strategic focus', 'Team stewardship', 'Domain expertise', 'Accessible founders'],
-    body: 'Omio\'s leadership team brings together experience from enterprise software delivery, AI research, product development, and technical consulting across multiple industries and geographies. Leadership here is not a layer of abstraction — it is active participation in the work and the relationships that make the work possible.',
+    body: 'OmiO\'s leadership team brings together experience from enterprise software delivery, AI research, product development, and technical consulting across multiple industries and geographies. Leadership here is not a layer of abstraction — it is active participation in the work and the relationships that make the work possible.',
     details: [
       {
         heading: 'Leadership Philosophy',
-        text: 'We lead by staying close to the problems — not by delegating all execution and managing through reports. Leaders at Omio contribute technically where it adds value, are honest about uncertainty, make decisions based on what is best for clients and the long-term health of the team, and take direct accountability for outcomes rather than attributing results to the people below them.',
+        text: 'We lead by staying close to the problems — not by delegating all execution and managing through reports. Leaders at OmiO contribute technically where it adds value, are honest about uncertainty, make decisions based on what is best for clients and the long-term health of the team, and take direct accountability for outcomes rather than attributing results to the people below them.',
       },
       {
         heading: 'Accessibility & Transparency',
@@ -643,7 +643,7 @@ export const pageContent = {
     eyebrow: 'About',
     intro: 'A curated network of technology and delivery partners whose capabilities complement our own.',
     highlights: ['Technology partners', 'Delivery partners', 'Shared capabilities', 'Cloud platforms', 'AI tooling', 'Specialist agencies'],
-    body: 'Omio works with partners whose work we have validated in production environments and whose values align with our own commitment to quality and transparency. Partnerships are built on demonstrated competence, not on commercial incentives or referral arrangements that do not benefit clients.',
+    body: 'OmiO works with partners whose work we have validated in production environments and whose values align with our own commitment to quality and transparency. Partnerships are built on demonstrated competence, not on commercial incentives or referral arrangements that do not benefit clients.',
     details: [
       {
         heading: 'Technology Partners',
@@ -651,7 +651,7 @@ export const pageContent = {
       },
       {
         heading: 'Delivery Partners',
-        text: 'Independent consultancies and specialist agencies with domain expertise that extends Omio\'s reach into verticals or geographies where depth matters more than breadth. We refer to partners only when we are confident their quality meets the standard our clients expect. Partner relationships are reviewed regularly — we do not maintain commercial arrangements that are no longer in clients\' interests.',
+        text: 'Independent consultancies and specialist agencies with domain expertise that extends OmiO\'s reach into verticals or geographies where depth matters more than breadth. We refer to partners only when we are confident their quality meets the standard our clients expect. Partner relationships are reviewed regularly — we do not maintain commercial arrangements that are no longer in clients\' interests.',
       },
     ],
   }),
@@ -662,7 +662,7 @@ export const pageContent = {
     eyebrow: 'About',
     intro: 'Remote-first and globally distributed — structured to work effectively with clients in any timezone.',
     highlights: ['Remote-first', 'Global reach', 'Engagement coverage', 'Europe', 'Asia', 'North America'],
-    body: 'Omio operates without a single headquarters. The team is distributed across Europe, Asia, and North America, which gives us natural coverage across timezones and proximity to clients wherever they are based. Being remote-first is a deliberate operational choice, not a consequence of the pandemic.',
+    body: 'OmiO operates without a single headquarters. The team is distributed across Europe, Asia, and North America, which gives us natural coverage across timezones and proximity to clients wherever they are based. Being remote-first is a deliberate operational choice, not a consequence of the pandemic.',
     details: [
       {
         heading: 'How We Engage Globally',
@@ -670,7 +670,7 @@ export const pageContent = {
       },
       {
         heading: 'Regional Presence',
-        text: 'While Omio is operationally remote-first, we maintain formal business registrations and banking relationships in multiple jurisdictions to support clean commercial arrangements with clients globally. For clients who require in-person engagement at key project milestones, we can accommodate travel and onsite working as part of the engagement structure.',
+        text: 'While OmiO is operationally remote-first, we maintain formal business registrations and banking relationships in multiple jurisdictions to support clean commercial arrangements with clients globally. For clients who require in-person engagement at key project milestones, we can accommodate travel and onsite working as part of the engagement structure.',
       },
     ],
   }),

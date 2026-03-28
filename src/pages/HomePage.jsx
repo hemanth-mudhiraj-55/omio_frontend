@@ -22,7 +22,7 @@ function HomePage() {
   return (
     <div className="page-stack">
       <SeoHead
-        description="Omio Solutions delivers enterprise-grade software engineering, AI agent evaluation, cloud DevOps, and staffing. Build intelligent systems with calm, precise execution."
+        description="OmiO Software Solutions — enterprise software development, AI agent evaluation, cloud DevOps, and staffing for ambitious teams."
       />
 
       <section className="hero-section">
@@ -30,7 +30,7 @@ function HomePage() {
           <img
             className="hero-bg"
             src={imagePaths.heroBackground}
-            alt="Omio Solutions hero background — abstract technology visual"
+            alt="OmiO Software Solutions — enterprise software development and AI services"
             fetchPriority="high"
           />
         )}
@@ -87,15 +87,15 @@ function HomePage() {
 
       <section className="story-section">
         <article className="story-panel story-panel--copy">
-          <p className="section-eyebrow">{labels.whyOmio}</p>
-          <h2>{labels.whyOmioTitle}</h2>
-          <p>{labels.whyOmioBody}</p>
+          <p className="section-eyebrow">{labels.whyOmiO}</p>
+          <h2>{labels.whyOmiOTitle}</h2>
+          <p>{labels.whyOmiOBody}</p>
           <div className="story-links">
             <Link className="text-link" to="/insights/case-studies">
               {labels.viewCaseStudies}
             </Link>
             <Link className="text-link" to="/about/who-we-are">
-              {labels.aboutOmio}
+              {labels.aboutOmiO}
             </Link>
           </div>
         </article>

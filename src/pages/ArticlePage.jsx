@@ -117,8 +117,8 @@ function ArticlePage() {
         '@type': 'Article',
         headline: article.title,
         description: article.metaDescription,
-        author: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omio.world' },
-        publisher: { '@type': 'Organization', name: 'Omio Solutions', url: 'https://omio.world', logo: { '@type': 'ImageObject', url: 'https://omio.world/logo.svg' } },
+        author: { '@type': 'Organization', name: 'OmiO Software Solutions', url: 'https://omio.world' },
+        publisher: { '@type': 'Organization', name: 'OmiO Software Solutions', url: 'https://omio.world', logo: { '@type': 'ImageObject', url: 'https://omio.world/logo.svg' } },
         datePublished: article.publishDate,
         keywords: article.tags ? article.tags.join(', ') : '',
         url: `https://omio.world${article.path}`,
@@ -142,9 +142,9 @@ function ArticlePage() {
 
   return (
     <article className="blog-post" itemScope itemType="https://schema.org/Article">
-      <SeoHead title={article.metaTitle.replace(' | Omio Solutions', '').replace(' | Omio', '')} description={article.metaDescription} type="article" />
+      <SeoHead title={article.metaTitle.replace(' | OmiO Software Solutions', '').replace(' | OmiO', '')} description={article.metaDescription} type="article" />
       <meta itemProp="datePublished" content={article.publishDate} />
-      <meta itemProp="author" content="Omio Solutions" />
+      <meta itemProp="author" content="OmiO Software Solutions" />
 
       <header className="blog-hero">
         <div className="blog-hero__meta">
@@ -159,7 +159,7 @@ function ArticlePage() {
         <h1 itemProp="headline">{article.title}</h1>
         <p className="blog-intro" itemProp="description">{article.intro}</p>
         <div className="blog-byline">
-          <span>Omio Solutions</span>
+          <span>OmiO Software Solutions</span>
           <span className="blog-byline__sep">·</span>
           <time dateTime={article.publishDate}>{article.publishDate}</time>
           <span className="blog-byline__sep">·</span>
@@ -199,7 +199,7 @@ function ArticlePage() {
         <div className="blog-footer__inner">
           <p>Want to work with a team that thinks this carefully about delivery?</p>
           <a className="contact-button" href="mailto:hello@omio.world">
-            Talk to Omio Solutions
+            Talk to OmiO Software Solutions
           </a>
         </div>
         <Link to="/insights/articles" className="blog-back-link blog-back-link--bottom">

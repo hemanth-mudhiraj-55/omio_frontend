@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const SITE_URL = 'https://omio.world';
-const SITE_NAME = 'Omio Solutions';
-const DEFAULT_TITLE = 'Omio Solutions — Enterprise Software & AI Services';
+const SITE_NAME = 'OmiO Software Solutions';
+const DEFAULT_TITLE = 'OmiO Software Solutions — Enterprise Software Development & AI Services';
 const DEFAULT_DESCRIPTION =
-  'Omio Solutions delivers enterprise-grade software engineering, AI agent evaluation, and cloud services. Web development, mobile apps, DevOps, RLHF, and staffing for ambitious teams.';
+  'OmiO Software Solutions — enterprise software development, AI agent evaluation, cloud DevOps, and staffing for ambitious teams.';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
 function setMeta(name, content, attr = 'name') {

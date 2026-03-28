@@ -35,7 +35,7 @@ function ContentPage() {
       </section>
 
       <div className="content-page-visual">
-        {pageImage && <img src={pageImage} alt={`${page.title} — Omio Solutions`} />}
+        {pageImage && <img src={pageImage} alt={`${page.title} — OmiO Software Solutions`} />}
       </div>
 
       {page.body && (

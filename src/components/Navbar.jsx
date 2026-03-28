@@ -51,10 +51,10 @@ function Navbar() {
       <div className="nav-bar">
 
         {/* Brand */}
-        <Link className="brand-lockup" to="/" aria-label="Omio homepage">
-          <img className="brand-logo" src="/logo.svg" alt="Omio logo" />
+        <Link className="brand-lockup" to="/">
+          <img className="brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" />
           <div>
-            <div className="brand-name">Omio</div>
+            <div className="brand-name">OmiO</div>
             <div className="brand-subtitle">{common.brandSubtitle}</div>
           </div>
         </Link>

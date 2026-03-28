@@ -1,5 +1,6 @@
-import heroBackgroundAsset from '../assets/heroBackground.webp';
-import heroBackgroundDarkAsset from '../assets/heroBackground.webp';
+// Hero image served from /public for LCP discoverability (preloaded in index.html)
+const heroBackgroundAsset = '/heroBackground.webp';
+const heroBackgroundDarkAsset = '/heroBackground.webp';
 import caseStudy from '../assets/caseStudyBackground.png'
 import careerOppertunities from '../assets/navItems/careerOppertunities.png'
 import aboutUs from '../assets/navItems/aboutUs.png'

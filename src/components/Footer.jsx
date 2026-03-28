@@ -30,14 +30,14 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link to="/" className="brand-lockup" style={{ marginBottom: 4 }}>
-            <img className="brand-logo" src="/logo.svg" alt="Omio logo" style={{ width: 48, height: 48 }} />
+            <img className="brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" style={{ width: 48, height: 48 }} />
             <div>
-              <div className="brand-name" style={{ fontSize: '1.2rem' }}>Omio Solutions</div>
+              <div className="brand-name" style={{ fontSize: '1.2rem' }}>OmiO Software Solutions</div>
             </div>
           </Link>
           <p>
-            Enterprise-grade software services shaped around intelligent systems,
-            modern delivery, and calm, precise execution.
+            OmiO Software Solutions delivers enterprise-grade software development,
+            AI services, and cloud solutions with calm, precise execution.
           </p>
           <div className="footer-social">
             {socialLinks.map((s) => (

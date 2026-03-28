@@ -2,12 +2,14 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import SiteLayout from './components/SiteLayout';
 import HomePage from './pages/HomePage';
-import ContentPage from './pages/ContentPage';
-import BlogsPage from './pages/BlogsPage';
-import BlogPost from './pages/BlogPost';
-import ArticlePage from './pages/ArticlePage';
-import ContactPage from './pages/ContactPage';
-import AboutPage from './pages/AboutPage';
+
+// Lazy-load non-homepage routes to reduce initial bundle
+const ContentPage = lazy(() => import('./pages/ContentPage'));
+const BlogsPage = lazy(() => import('./pages/BlogsPage'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const ArticlePage = lazy(() => import('./pages/ArticlePage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 import { darkColors, lightColors } from './config/theme';
 import { useSite } from './context/SiteContext';
 import { routeOrder } from './data/siteContent';
@@ -39,13 +41,13 @@ function App() {
       {/* ── Public site ── */}
       <Route element={<SiteLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="/insights/blogs" element={<BlogsPage />} />
-        <Route path="/insights/blogs/:slug" element={<BlogPost />} />
-        <Route path="/insights/articles/:slug" element={<ArticlePage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about/who-we-are" element={<AboutPage />} />
+        <Route path="/insights/blogs" element={<Suspense fallback={null}><BlogsPage /></Suspense>} />
+        <Route path="/insights/blogs/:slug" element={<Suspense fallback={null}><BlogPost /></Suspense>} />
+        <Route path="/insights/articles/:slug" element={<Suspense fallback={null}><ArticlePage /></Suspense>} />
+        <Route path="/contact" element={<Suspense fallback={null}><ContactPage /></Suspense>} />
+        <Route path="/about/who-we-are" element={<Suspense fallback={null}><AboutPage /></Suspense>} />
         {routeOrder.map((route) => (
-          <Route key={route.path} path={route.path} element={<ContentPage />} />
+          <Route key={route.path} path={route.path} element={<Suspense fallback={null}><ContentPage /></Suspense>} />
         ))}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

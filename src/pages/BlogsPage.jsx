@@ -7,7 +7,7 @@ function BlogsPage() {
     <div className="page-stack">
       <SeoHead
         title="Blog"
-        description="Thoughtful long-form writing on AI systems, enterprise agents, engineering strategy, and modern delivery practices — written by the Omio Solutions team."
+        description="Thoughtful long-form writing on AI systems, enterprise agents, engineering strategy, and modern delivery practices — written by the OmiO Software Solutions team."
       />
 
       <header className="content-hero">

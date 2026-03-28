@@ -34,7 +34,7 @@ export default function AdminLogin() {
   return (
     <div className="admin-login-shell">
       <div className="admin-login-card">
-        <p className="admin-login-logo">Omio <span>Admin</span></p>
+        <p className="admin-login-logo">OmiO <span>Admin</span></p>
         <p className="admin-login-sub">Sign in to the console</p>
         <h2>Welcome back</h2>
         {error && <div className="admin-error-msg">{error}</div>}

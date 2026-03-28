@@ -89,11 +89,11 @@ const translations = {
     uk: 'Enterprise AI-агенти з дисципліною delivery.',
   },
   heroFeaturedBody: {
-    en: 'Reference-inspired layout, adapted into a cleaner Omio identity and route-ready content system.',
-    de: 'Vom Referenzstil inspiriert und in eine klarere Omio-Identitaet uebersetzt.',
-    ja: '参考レイアウトをもとに、Omioらしいクリーンな構成へ最適化しました。',
-    pl: 'Layout inspirowany referencja, dostosowany do czystszej tozsamosci Omio.',
-    uk: 'Макет натхненний референсом, але адаптований до чистішої ідентичності Omio.',
+    en: 'Reference-inspired layout, adapted into a cleaner OmiO identity and route-ready content system.',
+    de: 'Vom Referenzstil inspiriert und in eine klarere OmiO-Identitaet uebersetzt.',
+    ja: '参考レイアウトをもとに、OmiOらしいクリーンな構成へ最適化しました。',
+    pl: 'Layout inspirowany referencja, dostosowany do czystszej tozsamosci OmiO.',
+    uk: 'Макет натхненний референсом, але адаптований до чистішої ідентичності OmiO.',
   },
   heroSecondaryCard: {
     en: 'Navigation, language selector, hover menu, and page scaffolding are all active.',
@@ -116,21 +116,21 @@ const translations = {
     pl: 'Ustrukturyzowane strony uslug jak nowoczesny katalog enterprise.',
     uk: 'Структуровані сторінки послуг у стилі enterprise-каталогу.',
   },
-  whyOmio: {
-    en: 'Why Omio',
-    de: 'Warum Omio',
-    ja: 'Omioを選ぶ理由',
-    pl: 'Dlaczego Omio',
-    uk: 'Чому Omio',
+  whyOmiO: {
+    en: 'Why OmiO',
+    de: 'Warum OmiO',
+    ja: 'OmiOを選ぶ理由',
+    pl: 'Dlaczego OmiO',
+    uk: 'Чому OmiO',
   },
-  whyOmioTitle: {
+  whyOmiOTitle: {
     en: 'A reference-inspired homepage, rebuilt with a calmer and more premium rhythm.',
     de: 'Eine von Referenzen inspirierte Startseite mit ruhigerem Premium-Rhythmus.',
-    ja: '参考デザインをもとに、より洗練されたOmio向けに再構成。',
+    ja: '参考デザインをもとに、より洗練されたOmiO向けに再構成。',
     pl: 'Strona glowna inspirowana referencja, ale bardziej premium i spokojna.',
     uk: 'Головна сторінка, натхненна референсом, але адаптована під більш преміальний ритм.',
   },
-  whyOmioBody: {
+  whyOmiOBody: {
     en: 'The layout now leans into stronger hierarchy, featured content blocks, and multi-section storytelling so the site feels closer to a polished services brand.',
     de: 'Das Layout setzt nun staerker auf Hierarchie, Featured Blocks und Storytelling.',
     ja: 'より強い階層構造、注目ブロック、複数セクションのストーリー構成を採用しました。',
@@ -144,12 +144,12 @@ const translations = {
     pl: 'Zobacz case studies',
     uk: 'Переглянути кейси',
   },
-  aboutOmio: {
-    en: 'About Omio',
-    de: 'Ueber Omio',
-    ja: 'Omioについて',
-    pl: 'O Omio',
-    uk: 'Про Omio',
+  aboutOmiO: {
+    en: 'About OmiO',
+    de: 'Ueber OmiO',
+    ja: 'OmiOについて',
+    pl: 'O OmiO',
+    uk: 'Про OmiO',
   },
   siteReadiness: {
     en: 'Site Readiness',
@@ -250,11 +250,11 @@ const homePillarsTranslations = [
       uk: 'Створюйте преміальні цифрові продукти, не втрачаючи швидкості delivery.',
     },
     description: {
-      en: 'Omio combines frontend craft, backend reliability, and platform thinking so every launch feels deliberate.',
-      de: 'Omio verbindet Frontend-Qualität, Backend-Verlässlichkeit und Plattformdenken für bewusste Launches.',
-      ja: 'OmioはフロントエンドのクラフトとバックエンドのReliabilityを組み合わせ、全てのリリースを意図的なものにします。',
-      pl: 'Omio łączy frontend craft, niezawodność backendu i myślenie platformowe, by każdy launch był przemyślany.',
-      uk: 'Omio поєднує frontend-майстерність, надійність бекенду та платформне мислення для кожного запуску.',
+      en: 'OmiO combines frontend craft, backend reliability, and platform thinking so every launch feels deliberate.',
+      de: 'OmiO verbindet Frontend-Qualität, Backend-Verlässlichkeit und Plattformdenken für bewusste Launches.',
+      ja: 'OmiOはフロントエンドのクラフトとバックエンドのReliabilityを組み合わせ、全てのリリースを意図的なものにします。',
+      pl: 'OmiO łączy frontend craft, niezawodność backendu i myślenie platformowe, by każdy launch był przemyślany.',
+      uk: 'OmiO поєднує frontend-майстерність, надійність бекенду та платформне мислення для кожного запуску.',
     },
   },
   {
@@ -353,7 +353,7 @@ const homeHighlightsTranslations = [
 const navLabelMap = {
   Services: { en: 'Services', de: 'Services', ja: 'サービス', pl: 'Uslugi', uk: 'Послуги' },
   'Case Studies': { en: 'Case Studies', de: 'Case Studies', ja: 'ケース', pl: 'Case Studies', uk: 'Кейси' },
-  Omio: { en: 'Omio', de: 'Omio', ja: 'Omio', pl: 'Omio', uk: 'Omio' },
+  OmiO: { en: 'OmiO', de: 'OmiO', ja: 'OmiO', pl: 'OmiO', uk: 'OmiO' },
   Career: { en: 'Career', de: 'Karriere', ja: '採用', pl: 'Kariera', uk: 'Карєра' },
   'About us': { en: 'About us', de: 'Ueber uns', ja: '会社情報', pl: 'O nas', uk: 'Про нас' },
 };
@@ -378,11 +378,11 @@ const navGroupTranslations = {
       uk: 'Створюйте системи, що залишаються елегантними під час масштабування.',
     },
     featuredDescription: {
-      en: 'From product engineering to enterprise AI, Omio combines clean execution with dependable delivery.',
-      de: 'Von Product Engineering bis Enterprise AI — Omio verbindet saubere Ausführung mit verlässlichem Delivery.',
-      ja: 'プロダクトエンジニアリングからEnterprise AIまで、OmioはクリーンなExecution と信頼性の高いDeliveryを融合。',
-      pl: 'Od product engineering po enterprise AI — Omio łączy czyste wykonanie z niezawodnym delivery.',
-      uk: 'Від product engineering до enterprise AI — Omio поєднує чисте виконання з надійним delivery.',
+      en: 'From product engineering to enterprise AI, OmiO combines clean execution with dependable delivery.',
+      de: 'Von Product Engineering bis Enterprise AI — OmiO verbindet saubere Ausführung mit verlässlichem Delivery.',
+      ja: 'プロダクトエンジニアリングからEnterprise AIまで、OmiOはクリーンなExecution と信頼性の高いDeliveryを融合。',
+      pl: 'Od product engineering po enterprise AI — OmiO łączy czyste wykonanie z niezawodnym delivery.',
+      uk: 'Від product engineering до enterprise AI — OmiO поєднує чисте виконання з надійним delivery.',
     },
   },
   insights: {
@@ -410,11 +410,11 @@ const navGroupTranslations = {
   },
   omio: {
     description: {
-      en: 'The core Omio story and positioning.',
-      de: 'Die Kerngeschichte und Positionierung von Omio.',
-      ja: 'Omioのコアストーリーとポジショニング。',
-      pl: 'Główna historia i pozycjonowanie Omio.',
-      uk: 'Основна історія та позиціонування Omio.',
+      en: 'The core OmiO story and positioning.',
+      de: 'Die Kerngeschichte und Positionierung von OmiO.',
+      ja: 'OmiOのコアストーリーとポジショニング。',
+      pl: 'Główna historia i pozycjonowanie OmiO.',
+      uk: 'Основна історія та позиціонування OmiO.',
     },
     featuredTitle: {
       en: 'Technology that feels carefully considered.',
@@ -456,11 +456,11 @@ const navGroupTranslations = {
   },
   about: {
     description: {
-      en: 'Who Omio is, how the team works, and where it is headed.',
-      de: 'Wer Omio ist, wie das Team arbeitet und wohin es geht.',
-      ja: 'Omioとは何者か、チームがどのように働き、どこへ向かうのか。',
-      pl: 'Kim jest Omio, jak pracuje zespół i dokąd zmierza.',
-      uk: 'Хто таке Omio, як працює команда та куди вона прямує.',
+      en: 'Who OmiO is, how the team works, and where it is headed.',
+      de: 'Wer OmiO ist, wie das Team arbeitet und wohin es geht.',
+      ja: 'OmiOとは何者か、チームがどのように働き、どこへ向かうのか。',
+      pl: 'Kim jest OmiO, jak pracuje zespół i dokąd zmierza.',
+      uk: 'Хто таке OmiO, як працює команда та куди вона прямує.',
     },
     featuredTitle: {
       en: 'A clear point of view, expressed simply.',
@@ -576,21 +576,21 @@ const navItemTranslations = {
   '/insights/articles': {
     title: { en: 'Articles', de: 'Artikel', ja: '記事', pl: 'Artykuły', uk: 'Статті' },
     description: {
-      en: "In-depth reads on software startups, industry trends, and Omio's perspective on technology.",
-      de: 'Ausführliche Artikel über Software-Startups, Branchentrends und Omios Technologieperspektive.',
-      ja: 'ソフトウェアスタートアップ、業界トレンド、Omioの技術的視点についての詳細な読み物。',
-      pl: 'Szczegółowe artykuły o startupach software, trendach branżowych i perspektywie Omio na technologię.',
-      uk: 'Детальні матеріали про software-стартапи, галузеві тренди та технологічну перспективу Omio.',
+      en: "In-depth reads on software startups, industry trends, and OmiO's perspective on technology.",
+      de: 'Ausführliche Artikel über Software-Startups, Branchentrends und OmiOs Technologieperspektive.',
+      ja: 'ソフトウェアスタートアップ、業界トレンド、OmiOの技術的視点についての詳細な読み物。',
+      pl: 'Szczegółowe artykuły o startupach software, trendach branżowych i perspektywie OmiO na technologię.',
+      uk: 'Детальні матеріали про software-стартапи, галузеві тренди та технологічну перспективу OmiO.',
     },
   },
   '/insights/case-studies': {
     title: { en: 'Case Studies', de: 'Case Studies', ja: 'ケーススタディ', pl: 'Case Studies', uk: 'Кейси' },
     description: {
-      en: 'Real delivery stories that show how Omio turns technical ambition into operational results.',
-      de: 'Echte Delivery-Geschichten, die zeigen, wie Omio technischen Ehrgeiz in operative Ergebnisse umwandelt.',
-      ja: 'OmioがどのようにTechnical Ambitionを運用結果に変えるかを示す実際のDeliveryストーリー。',
-      pl: 'Prawdziwe historie delivery pokazujące, jak Omio przekształca techniczne ambicje w wyniki operacyjne.',
-      uk: 'Реальні delivery-історії, що показують, як Omio перетворює технічні амбіції на операційні результати.',
+      en: 'Real delivery stories that show how OmiO turns technical ambition into operational results.',
+      de: 'Echte Delivery-Geschichten, die zeigen, wie OmiO technischen Ehrgeiz in operative Ergebnisse umwandelt.',
+      ja: 'OmiOがどのようにTechnical Ambitionを運用結果に変えるかを示す実際のDeliveryストーリー。',
+      pl: 'Prawdziwe historie delivery pokazujące, jak OmiO przekształca techniczne ambicje w wyniki operacyjne.',
+      uk: 'Реальні delivery-історії, що показують, як OmiO перетворює технічні амбіції на операційні результати.',
     },
   },
   '/insights/blogs': {
@@ -604,7 +604,7 @@ const navItemTranslations = {
     },
   },
   '/omio-solutions': {
-    title: { en: 'Omio Solutions', de: 'Omio Solutions', ja: 'Omio Solutions', pl: 'Omio Solutions', uk: 'Omio Solutions' },
+    title: { en: 'OmiO Software Solutions', de: 'OmiO Software Solutions', ja: 'OmiO Software Solutions', pl: 'OmiO Software Solutions', uk: 'OmiO Software Solutions' },
     description: {
       en: 'A concise overview page that anchors the company narrative.',
       de: 'Eine prägnante Übersichtsseite, die das Unternehmensnarrativ verankert.',
@@ -614,7 +614,7 @@ const navItemTranslations = {
     },
   },
   '/careers/life-at-omio': {
-    title: { en: 'Life at Omio', de: 'Leben bei Omio', ja: 'Omioでの生活', pl: 'Życie w Omio', uk: 'Життя в Omio' },
+    title: { en: 'Life at OmiO', de: 'Leben bei OmiO', ja: 'OmiOでの生活', pl: 'Życie w OmiO', uk: 'Життя в OmiO' },
     description: {
       en: 'A look at how the team works, collaborates, and grows together.',
       de: 'Ein Blick darauf, wie das Team arbeitet, zusammenarbeitet und gemeinsam wächst.',
@@ -656,11 +656,11 @@ const navItemTranslations = {
   '/about/who-we-are': {
     title: { en: 'Who We Are', de: 'Wer wir sind', ja: '私たちについて', pl: 'Kim jesteśmy', uk: 'Хто ми' },
     description: {
-      en: 'The story, values, and operating mindset behind Omio Solutions.',
-      de: 'Die Geschichte, Werte und Denkweise hinter Omio Solutions.',
-      ja: 'Omio Solutionsの背景にあるストーリー、価値観、運営マインドセット。',
-      pl: 'Historia, wartości i sposób działania Omio Solutions.',
-      uk: 'Історія, цінності та операційне мислення Omio Solutions.',
+      en: 'The story, values, and operating mindset behind OmiO Software Solutions.',
+      de: 'Die Geschichte, Werte und Denkweise hinter OmiO Software Solutions.',
+      ja: 'OmiO Software Solutionsの背景にあるストーリー、価値観、運営マインドセット。',
+      pl: 'Historia, wartości i sposób działania OmiO Software Solutions.',
+      uk: 'Історія, цінності та операційне мислення OmiO Software Solutions.',
     },
   },
   '/about/leadership': {
@@ -676,21 +676,21 @@ const navItemTranslations = {
   '/about/partners': {
     title: { en: 'Partners', de: 'Partner', ja: 'パートナー', pl: 'Partnerzy', uk: 'Партнери' },
     description: {
-      en: 'Collaborators and ecosystem relationships that expand what Omio can deliver.',
-      de: 'Kooperationspartner und Ökosystembeziehungen, die Omios Leistungsfähigkeit erweitern.',
-      ja: 'Omioが提供できることを拡大する協力者とエコシステムの関係。',
-      pl: 'Współpracownicy i relacje ekosystemowe rozszerzające możliwości Omio.',
-      uk: 'Партнери та екосистемні відносини, що розширюють можливості Omio.',
+      en: 'Collaborators and ecosystem relationships that expand what OmiO can deliver.',
+      de: 'Kooperationspartner und Ökosystembeziehungen, die OmiOs Leistungsfähigkeit erweitern.',
+      ja: 'OmiOが提供できることを拡大する協力者とエコシステムの関係。',
+      pl: 'Współpracownicy i relacje ekosystemowe rozszerzające możliwości OmiO.',
+      uk: 'Партнери та екосистемні відносини, що розширюють можливості OmiO.',
     },
   },
   '/about/location': {
     title: { en: 'Location', de: 'Standort', ja: '所在地', pl: 'Lokalizacja', uk: 'Розташування' },
     description: {
-      en: 'Where the team operates and how Omio works with clients across regions.',
-      de: 'Wo das Team tätig ist und wie Omio regionsübergreifend mit Kunden zusammenarbeitet.',
-      ja: 'チームが活動する場所と、Omioが地域を越えてクライアントとどのように協力するか。',
-      pl: 'Gdzie działa zespół i jak Omio współpracuje z klientami w różnych regionach.',
-      uk: 'Де працює команда та як Omio співпрацює з клієнтами в різних регіонах.',
+      en: 'Where the team operates and how OmiO works with clients across regions.',
+      de: 'Wo das Team tätig ist und wie OmiO regionsübergreifend mit Kunden zusammenarbeitet.',
+      ja: 'チームが活動する場所と、OmiOが地域を越えてクライアントとどのように協力するか。',
+      pl: 'Gdzie działa zespół i jak OmiO współpracuje z klientami w różnych regionach.',
+      uk: 'Де працює команда та як OmiO співпрацює з клієнтами в різних регіонах.',
     },
   },
 };
@@ -726,7 +726,7 @@ export function getLocalizedContent(language) {
     }),
     heroContent: {
       ...baseHeroContent,
-      eyebrow: 'Omio Solutions',
+      eyebrow: 'OmiO Software Solutions',
       description: translate(heroDescriptionMap, language),
       titleLines: baseHeroContent.titleLines.map((line) => ({
         ...line,
@@ -774,11 +774,11 @@ export function getLocalizedContent(language) {
     labels: {
       servicesHeading: translate(translations.servicesHeading, language),
       servicesSubheading: translate(translations.servicesSubheading, language),
-      whyOmio: translate(translations.whyOmio, language),
-      whyOmioTitle: translate(translations.whyOmioTitle, language),
-      whyOmioBody: translate(translations.whyOmioBody, language),
+      whyOmiO: translate(translations.whyOmiO, language),
+      whyOmiOTitle: translate(translations.whyOmiOTitle, language),
+      whyOmiOBody: translate(translations.whyOmiOBody, language),
       viewCaseStudies: translate(translations.viewCaseStudies, language),
-      aboutOmio: translate(translations.aboutOmio, language),
+      aboutOmiO: translate(translations.aboutOmiO, language),
       siteReadiness: translate(translations.siteReadiness, language),
       insightsHeading: translate(translations.insightsHeading, language),
       insightsTitle: translate(translations.insightsTitle, language),

@@ -236,13 +236,13 @@ function ContactPage() {
     <div className="page-stack">
       <SeoHead
         title="Contact"
-        description="Get in touch with Omio Solutions. Reach our sales, support, consulting, partnerships, or careers team. We respond within one business day."
+        description="Get in touch with OmiO Software Solutions. Reach our sales, support, consulting, partnerships, or careers team. We respond within one business day."
       />
 
       {/* ── Hero ──────────────────────────── */}
       <header className="content-hero contact-hero">
         <p className="section-eyebrow">Get in touch</p>
-        <h1>Contact Omio Solutions</h1>
+        <h1>Contact OmiO Software Solutions</h1>
         <p className="contact-hero__sub">
           Every message reaches a real person. Choose the channel that fits your need and we will
           respond promptly — usually within one business day.
@@ -300,7 +300,7 @@ function ContactPage() {
         <div className="contact-info-strip__col">
           <p className="section-eyebrow">Headquarters</p>
           <h3>{companyInfo.headquarters}</h3>
-          <p>Omio operates as a distributed team. We work with clients across Europe, Asia, and North America.</p>
+          <p>OmiO operates as a distributed team. We work with clients across Europe, Asia, and North America.</p>
         </div>
         <div className="contact-info-strip__col">
           <p className="section-eyebrow">Connect with us</p>

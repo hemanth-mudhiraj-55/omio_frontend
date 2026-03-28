@@ -47,15 +47,15 @@ function AboutPage() {
     <div className="page-stack">
       <SeoHead
         title="Who We Are"
-        description="Omio Solutions is a technology services company focused on product engineering, enterprise AI, and operational delivery. Learn about our mission, values, and team."
+        description="OmiO Software Solutions is a technology services company focused on product engineering, enterprise AI, and operational delivery. Learn about our mission, values, and team."
       />
 
       {/* ── Hero ──────────────────────────── */}
       <header className="about-hero">
-        <p className="section-eyebrow">About Omio</p>
+        <p className="section-eyebrow">About OmiO</p>
         <h1>Software built with intention</h1>
         <p className="about-hero__sub">
-          Omio Solutions is a technology services company focused on product engineering,
+          OmiO Software Solutions is a technology services company focused on product engineering,
           enterprise AI, and operational delivery. We work with organisations that value
           precision, transparency, and long-term thinking over quick fixes.
         </p>
@@ -78,11 +78,11 @@ function AboutPage() {
         <p>
           We exist to close the gap between technical ambition and operational reality.
           Whether a team needs a modern web platform, an AI agent evaluation framework,
-          or a staffing partner that understands delivery culture — Omio provides the
+          or a staffing partner that understands delivery culture — OmiO provides the
           engineering depth and execution discipline to make it happen.
         </p>
         <p>
-          Founded in {companyInfo.founded}, Omio started as a small engineering practice
+          Founded in {companyInfo.founded}, OmiO started as a small engineering practice
           with a clear belief: the best technology work comes from teams that care about
           craft and communicate honestly. That belief still drives everything we do.
         </p>
@@ -107,7 +107,7 @@ function AboutPage() {
         <p className="section-eyebrow">How we work</p>
         <h2>Distributed, deliberate, and dependable</h2>
         <p>
-          Omio operates as a remote-first company with team members across Europe, Asia,
+          OmiO operates as a remote-first company with team members across Europe, Asia,
           and North America. We structure work around asynchronous communication, clear
           ownership, and short feedback loops — so timezone differences become an advantage,
           not a bottleneck.
@@ -160,7 +160,7 @@ function AboutPage() {
         <h2>Ready to build something meaningful?</h2>
         <p style={{ maxWidth: 520, margin: '0 auto 24px' }}>
           Every conversation starts with understanding your goals. Reach out and let us
-          explore how Omio can help.
+          explore how OmiO can help.
         </p>
         <Link className="contact-button" to="/contact">
           Get in touch
