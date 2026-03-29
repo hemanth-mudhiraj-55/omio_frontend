@@ -156,9 +156,9 @@ function AboutPage() {
       </section>
 
       {/* ── CTA ───────────────────────────── */}
-      <section className="about-section" style={{ textAlign: 'center', paddingBottom: 48 }}>
+      <section className="about-section about-cta">
         <h2>Ready to build something meaningful?</h2>
-        <p style={{ maxWidth: 520, margin: '0 auto 24px' }}>
+        <p className="about-cta__text">
           Every conversation starts with understanding your goals. Reach out and let us
           explore how OmiO can help.
         </p>

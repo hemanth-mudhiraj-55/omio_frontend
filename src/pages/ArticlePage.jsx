@@ -198,9 +198,9 @@ function ArticlePage() {
       <footer className="blog-footer">
         <div className="blog-footer__inner">
           <p>Want to work with a team that thinks this carefully about delivery?</p>
-          <a className="contact-button" href="mailto:hello@omio.world">
+          <Link className="contact-button" to="/contact">
             Talk to OmiO Software Solutions
-          </a>
+          </Link>
         </div>
         <Link to="/insights/articles" className="blog-back-link blog-back-link--bottom">
           ← Back to all articles

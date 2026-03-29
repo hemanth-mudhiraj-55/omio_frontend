@@ -217,9 +217,8 @@ function Navbar() {
             ))}
           </select>
           <Link
-            className="contact-button"
+            className="contact-button contact-button--center"
             to="/contact"
-            style={{ justifyContent: 'center' }}
             onClick={() => setMenuOpen(false)}
           >
             {common.contact}

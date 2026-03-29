@@ -92,6 +92,7 @@ export const companyInfo = {
   legalName: 'OmiO Solutions Ltd.',
   founded: '2023',
   headquarters: 'Global — remote-first',
+  address: 'Miryalaguda, Nalgonda, Telangana 508207, India',
   website: 'https://omio.world',
   primaryEmail: 'hello@omio.world',
 };

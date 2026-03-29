@@ -29,16 +29,19 @@ function Footer() {
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <Link to="/" className="brand-lockup" style={{ marginBottom: 4 }}>
-            <img className="brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" style={{ width: 48, height: 48 }} />
+          <Link to="/" className="brand-lockup footer-brand-link">
+            <img className="brand-logo footer-brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" />
             <div>
-              <div className="brand-name" style={{ fontSize: '1.2rem' }}>OmiO Software Solutions</div>
+              <div className="brand-name footer-brand-name">OmiO Software Solutions</div>
             </div>
           </Link>
           <p>
             OmiO Software Solutions delivers enterprise-grade software development,
             AI services, and cloud solutions with calm, precise execution.
           </p>
+          <address className="footer-address">
+            {companyInfo.address}
+          </address>
           <div className="footer-social">
             {socialLinks.map((s) => (
               <a

@@ -298,8 +298,8 @@ function ContactPage() {
           <p>We read every message and route it to the right person. Sales and support requests get priority handling.</p>
         </div>
         <div className="contact-info-strip__col">
-          <p className="section-eyebrow">Headquarters</p>
-          <h3>{companyInfo.headquarters}</h3>
+          <p className="section-eyebrow">Office</p>
+          <h3>{companyInfo.address}</h3>
           <p>OmiO operates as a distributed team. We work with clients across Europe, Asia, and North America.</p>
         </div>
         <div className="contact-info-strip__col">
