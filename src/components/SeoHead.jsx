@@ -45,6 +45,11 @@ export default function SeoHead({ title, description, type = 'website', image })
       window.gtag('event', 'page_view', { page_path: pathname, page_title: fullTitle });
     }
 
+    // Meta (Facebook) Pixel SPA page view tracking
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'PageView');
+    }
+
     // Standard meta
     setMeta('description', desc);
 
