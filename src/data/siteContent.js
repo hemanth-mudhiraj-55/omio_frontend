@@ -185,7 +185,7 @@ export const heroContent = {
     { text: 'Artificial intelligence', tone: 'muted' },
   ],
   description:
-    'Enterprise-grade software services shaped around intelligent systems, modern delivery, and calm, precise execution.',
+    'OmiO delivers enterprise-grade software solutions shaped around intelligent systems, modern delivery, and calm, precise execution.',
   primaryAction: 'Contact',
   secondaryAction: 'Explore Services',
 };

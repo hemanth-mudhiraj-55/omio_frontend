@@ -45,7 +45,7 @@ function Footer() {
                 key={s.key}
                 href={s.url || '#'}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="footer-social-icon"
                 aria-label={s.label}
               >

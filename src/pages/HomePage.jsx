@@ -22,7 +22,7 @@ function HomePage() {
   return (
     <div className="page-stack">
       <SeoHead
-        description="OmiO Software Solutions — enterprise software development, AI agent evaluation, cloud DevOps, and staffing for ambitious teams."
+        description="OmiO Software Solutions — enterprise-grade software services, AI agent evaluation, cloud DevOps, and proven case studies from real delivery."
       />
 
       <section className="hero-section">
@@ -55,6 +55,16 @@ function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="home-intro-band">
+        <h2>OmiO Software Solutions — Enterprise-Grade Software Services</h2>
+        <p>
+          OmiO Software Solutions delivers enterprise-grade software services across web development,
+          mobile engineering, cloud DevOps, and applied AI. Our software delivery approach is shaped by
+          real case studies and proven outcomes — helping ambitious teams build intelligent systems
+          with precision and long-term reliability.
+        </p>
       </section>
 
       <section className="pillar-grid">

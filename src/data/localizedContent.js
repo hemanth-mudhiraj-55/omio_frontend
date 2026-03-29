@@ -110,11 +110,11 @@ const translations = {
     uk: 'Послуги',
   },
   servicesSubheading: {
-    en: 'Structured service pages presented like a modern enterprise catalog.',
-    de: 'Strukturierte Service-Seiten wie ein modernes Enterprise-Katalogsystem.',
-    ja: 'モダンなエンタープライズ型のサービス一覧。',
-    pl: 'Ustrukturyzowane strony uslug jak nowoczesny katalog enterprise.',
-    uk: 'Структуровані сторінки послуг у стилі enterprise-каталогу.',
+    en: 'Enterprise software services — from AI agents to cloud delivery.',
+    de: 'Enterprise-Software-Services — von KI-Agenten bis Cloud-Delivery.',
+    ja: 'エンタープライズソフトウェアサービス — AIエージェントからクラウドデリバリーまで。',
+    pl: 'Usługi software enterprise — od agentów AI po cloud delivery.',
+    uk: 'Enterprise software-послуги — від AI-агентів до cloud delivery.',
   },
   whyOmiO: {
     en: 'Why OmiO',
@@ -124,18 +124,18 @@ const translations = {
     uk: 'Чому OmiO',
   },
   whyOmiOTitle: {
-    en: 'A reference-inspired homepage, rebuilt with a calmer and more premium rhythm.',
-    de: 'Eine von Referenzen inspirierte Startseite mit ruhigerem Premium-Rhythmus.',
-    ja: '参考デザインをもとに、より洗練されたOmiO向けに再構成。',
-    pl: 'Strona glowna inspirowana referencja, ale bardziej premium i spokojna.',
-    uk: 'Головна сторінка, натхненна референсом, але адаптована під більш преміальний ритм.',
+    en: 'Enterprise-grade software delivery, shaped by real case studies.',
+    de: 'Enterprise-Software-Delivery, geformt durch echte Case Studies.',
+    ja: '実際のケーススタディに基づくエンタープライズ品質のソフトウェアデリバリー。',
+    pl: 'Enterprise-grade software delivery, ukształtowane przez realne case studies.',
+    uk: 'Enterprise-grade software delivery, сформоване реальними кейсами.',
   },
   whyOmiOBody: {
-    en: 'The layout now leans into stronger hierarchy, featured content blocks, and multi-section storytelling so the site feels closer to a polished services brand.',
-    de: 'Das Layout setzt nun staerker auf Hierarchie, Featured Blocks und Storytelling.',
-    ja: 'より強い階層構造、注目ブロック、複数セクションのストーリー構成を採用しました。',
-    pl: 'Layout opiera sie teraz na mocniejszej hierarchii i storytellingu sekcji.',
-    uk: 'Макет тепер має сильнішу ієрархію та виразні контент-блоки.',
+    en: 'OmiO Software Solutions combines engineering depth with operational discipline. Our case studies document real delivery outcomes — from product launches to enterprise AI deployments — so you can evaluate our software services against measurable results.',
+    de: 'OmiO Software Solutions verbindet Engineering-Tiefe mit operativer Disziplin. Unsere Case Studies dokumentieren echte Delivery-Ergebnisse — von Produktlaunches bis hin zu Enterprise-KI-Deployments.',
+    ja: 'OmiO Software Solutionsは、エンジニアリングの深さと運用規律を組み合わせています。ケーススタディは、製品ローンチからエンタープライズAIデプロイメントまでの実際のデリバリー成果を記録しています。',
+    pl: 'OmiO Software Solutions łączy głębię inżynieryjną z dyscypliną operacyjną. Nasze case studies dokumentują realne wyniki delivery — od launchy produktów po wdrożenia enterprise AI.',
+    uk: 'OmiO Software Solutions поєднує інженерну глибину з операційною дисципліною. Наші кейси документують реальні результати delivery — від запусків продуктів до enterprise AI.',
   },
   viewCaseStudies: {
     en: 'View Case Studies',
@@ -166,11 +166,11 @@ const translations = {
     uk: 'Insights',
   },
   insightsTitle: {
-    en: 'Editorial and proof layers that mirror enterprise websites.',
-    de: 'Editoriale und Proof-Layer wie bei Enterprise-Websites.',
-    ja: 'エンタープライズサイトに近い編集・実績レイヤー。',
-    pl: 'Warstwa editorial i proof jak na stronach enterprise.',
-    uk: 'Редакційні та proof-блоки в стилі enterprise-сайтів.',
+    en: 'Case Studies, Articles & Engineering Insights',
+    de: 'Case Studies, Artikel & Engineering Insights',
+    ja: 'ケーススタディ、記事、エンジニアリングインサイト',
+    pl: 'Case Studies, artykuły i engineering insights',
+    uk: 'Кейси, статті та інженерні інсайти',
   },
   aboutHeading: {
     en: 'About',
@@ -180,11 +180,11 @@ const translations = {
     uk: 'Про нас',
   },
   aboutTitle: {
-    en: 'Dedicated pages for the company story, leadership, and partners.',
-    de: 'Eigene Seiten fuer Unternehmensgeschichte, Leadership und Partner.',
-    ja: '会社情報、リーダー、パートナーの専用ページ。',
-    pl: 'Dedykowane strony dla historii firmy, liderow i partnerow.',
-    uk: 'Окремі сторінки для історії компанії, лідерства та партнерів.',
+    en: 'About OmiO Software Solutions',
+    de: 'Über OmiO Software Solutions',
+    ja: 'OmiO Software Solutionsについて',
+    pl: 'O OmiO Software Solutions',
+    uk: 'Про OmiO Software Solutions',
   },
   contentReady: {
     en: 'Ready for final page-specific copy.',
@@ -220,7 +220,7 @@ const translations = {
    HERO DESCRIPTION
 ───────────────────────────────────────────────── */
 const heroDescriptionMap = {
-  en: 'Enterprise-grade software services shaped around intelligent systems, modern delivery, and calm, precise execution.',
+  en: 'OmiO delivers enterprise-grade software solutions shaped around intelligent systems, modern delivery, and calm, precise execution.',
   de: 'Enterprise-Software-Dienstleistungen rund um intelligente Systeme, modernes Delivery und präzise Ausführung.',
   ja: 'インテリジェントなシステム、モダンなデリバリー、そして精確な実行に特化したエンタープライズ向けソフトウェアサービス。',
   pl: 'Usługi software na poziomie enterprise, skupione wokół inteligentnych systemów, nowoczesnego delivery i precyzyjnej realizacji.',

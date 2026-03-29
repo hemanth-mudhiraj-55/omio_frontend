@@ -79,7 +79,7 @@ function Block({ block }) {
             {block.items.map((item, i) => (
               <li key={i}>
                 {item.external
-                  ? <a href={item.href} target="_blank" rel="noopener noreferrer" className="blog-link-item">{item.text}</a>
+                  ? <a href={item.href} target="_blank" rel="noopener noreferrer nofollow" className="blog-link-item">{item.text}</a>
                   : <Link to={item.href} className="blog-link-item">{item.text}</Link>
                 }
               </li>

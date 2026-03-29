@@ -40,6 +40,28 @@ img { display: block; max-width: 100%; }
 .page-stack { display: grid; gap: 32px; width: 100%; }
 .services-preview { display: grid; gap: 32px; padding: 0 var(--side-pad); }
 
+/* ── Home intro band ─────────────────────── */
+.home-intro-band {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--side-pad);
+  text-align: center;
+}
+.home-intro-band h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+.home-intro-band p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 /* ── Navbar ─────────────────────────────── */
 
 .nav-wrapper {

@@ -1,7 +1,7 @@
 // Hero image served from /public for LCP discoverability (preloaded in index.html)
 const heroBackgroundAsset = '/heroBackground.webp';
 const heroBackgroundDarkAsset = '/heroBackground.webp';
-import caseStudy from '../assets/caseStudyBackground.png'
+import caseStudy from '../assets/services/caseStudies.webp'
 import careerOppertunities from '../assets/navItems/careerOppertunities.png'
 import aboutUs from '../assets/navItems/aboutUs.png'
 import appDev from '../assets/services/appDevelopment.webp'
@@ -13,6 +13,16 @@ import enterpriseAI from '../assets/services/enterpriseAI.webp'
 import agentRisk from '../assets/services/agentRisk.webp'
 import moniteringTesting from '../assets/services/moniteringTesting.webp'
 import rlhf from '../assets/services/rlhf.webp'
+import staffing from '../assets/services/staffing.webp'
+import blogs from '../assets/services/blogs.webp'
+import openings from '../assets/services/openings.webp'
+import benefits from '../assets/services/benefits.webp'
+import careerGrowth from '../assets/services/careerGrowth.webp'
+import whoWeAre from '../assets/services/whoWeAre.webp'
+import leadership from '../assets/services/leadership.webp'
+import partners from '../assets/services/partners.webp'
+
+
 
 
 export const imagePaths = {
@@ -35,17 +45,17 @@ export const imagePaths = {
     '/services/agent-readiness-risk-assessment': agentRisk,
     '/services/continuous-monitoring-regression-testing': moniteringTesting,
     '/services/sft-rlhf': rlhf,
-    '/services/staffing': '',
-    '/insights/case-studies': '',
-    '/insights/blogs': '',
+    '/services/staffing': staffing,
+    '/insights/case-studies': caseStudy,
+    '/insights/blogs': blogs,
     '/omio-solutions': '',
     '/careers/life-at-omio': '',
-    '/careers/open-positions': '',
-    '/careers/benefits': '',
-    '/careers/professional-development': '',
-    '/about/who-we-are': '',
-    '/about/leadership': '',
-    '/about/partners': '',
+    '/careers/open-positions': openings,
+    '/careers/benefits': benefits,
+    '/careers/professional-development': careerGrowth,
+    '/about/who-we-are': whoWeAre,
+    '/about/leadership': leadership,
+    '/about/partners': partners,
     '/about/location': '',
   },
 };

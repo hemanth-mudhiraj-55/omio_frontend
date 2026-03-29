@@ -307,7 +307,7 @@ function ContactPage() {
           <h3>Follow along</h3>
           <div className="contact-social-icons">
             {socialLinks.map((s) => (
-              <a key={s.key} href={s.url || '#'} target="_blank" rel="noopener noreferrer" className="contact-social-icon" aria-label={s.label}>
+              <a key={s.key} href={s.url || '#'} target="_blank" rel="noopener noreferrer nofollow" className="contact-social-icon" aria-label={s.label}>
                 {socialIcons[s.key]}
               </a>
             ))}
