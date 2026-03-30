@@ -35,7 +35,7 @@ export default function AdminLogin() {
     <div className="admin-login-shell">
       <div className="admin-login-card">
         <div className="admin-login-logo">
-          <img src="/logo.svg" alt="OmiO Software Solutions logo" style={{ width: 32, height: 32 }} />
+          <img src="/logo.png" alt="OmiO Software Solutions logo" style={{ width: 32, height: 32 }} />
           <span>OmiO <span>Admin</span></span>
         </div>
         <p className="admin-login-sub">Sign in to the console</p>

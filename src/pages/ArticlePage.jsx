@@ -118,7 +118,7 @@ function ArticlePage() {
         headline: article.title,
         description: article.metaDescription,
         author: { '@type': 'Organization', name: 'OmiO Software Solutions', url: 'https://omio.world' },
-        publisher: { '@type': 'Organization', name: 'OmiO Software Solutions', url: 'https://omio.world', logo: { '@type': 'ImageObject', url: 'https://omio.world/logo.svg' } },
+        publisher: { '@type': 'Organization', name: 'OmiO Software Solutions', url: 'https://omio.world', logo: { '@type': 'ImageObject', url: 'https://omio.world/logo.png' } },
         datePublished: article.publishDate,
         keywords: article.tags ? article.tags.join(', ') : '',
         url: `https://omio.world${article.path}`,

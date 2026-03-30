@@ -26,11 +26,11 @@ export const supportedLanguages = [
 ───────────────────────────────────────────────── */
 const translations = {
   brandSubtitle: {
-    en: 'Software Services',
-    de: 'Software-Dienstleistungen',
-    ja: 'ソフトウェアサービス',
-    pl: 'Usługi programistyczne',
-    uk: 'Програмні послуги',
+    en: 'Software Solutions',
+    de: 'Software-Lösungen',
+    ja: 'ソフトウェアソリューション',
+    pl: 'Rozwiązania programistyczne',
+    uk: 'Програмні рішення',
   },
   contact: {
     en: 'Contact',

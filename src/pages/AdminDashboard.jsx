@@ -94,7 +94,7 @@ export default function AdminDashboard() {
       {/* ── Topbar ── */}
       <div className="admin-topbar">
         <div className="admin-topbar__brand">
-          <img src="/logo.svg" alt="OmiO Software Solutions logo" style={{ width: 28, height: 28 }} />
+          <img src="/logo.png" alt="OmiO Software Solutions logo" style={{ width: 28, height: 28 }} />
           OmiO <span>Admin</span>
         </div>
         <div className="admin-topbar__user">

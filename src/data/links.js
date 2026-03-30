@@ -90,9 +90,9 @@ export const socialLinks = [
 export const companyInfo = {
   name: 'OmiO Software Solutions',
   legalName: 'OmiO Solutions Ltd.',
-  founded: '2023',
-  headquarters: 'Global — remote-first',
-  address: 'Miryalaguda, Nalgonda, Telangana 508207, India',
+  founded: '2026',
+  headquarters: 'Hyderabad, India',
+  address: 'Uppal, Hyderabad, Telangana 500039, India',
   website: 'https://omio.world',
   primaryEmail: 'hello@omio.world',
 };

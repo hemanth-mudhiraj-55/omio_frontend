@@ -30,7 +30,7 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link to="/" className="brand-lockup footer-brand-link">
-            <img className="brand-logo footer-brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" />
+            <img className="brand-logo footer-brand-logo" src="/logo.png" alt="OmiO Software Solutions logo" />
             <div>
               <div className="brand-name footer-brand-name">OmiO Software Solutions</div>
             </div>
@@ -39,9 +39,14 @@ function Footer() {
             OmiO Software Solutions delivers enterprise-grade software development,
             AI services, and cloud solutions with calm, precise execution.
           </p>
-          <address className="footer-address">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Uppal,+Hyderabad,+Telangana+500039,+India"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="footer-address footer-address-link"
+          >
             {companyInfo.address}
-          </address>
+          </a>
           <div className="footer-social">
             {socialLinks.map((s) => (
               <a
@@ -59,7 +64,9 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h2 className="footer-heading">Services</h2>
+          <Link to="/services/web-development" className="footer-heading-link">
+            <h2 className="footer-heading">Services</h2>
+          </Link>
           <Link to="/services/web-development">Web Development</Link>
           <Link to="/services/mobile-development">Mobile Development</Link>
           <Link to="/services/enterprise-ai-agents">Enterprise AI Agents</Link>
@@ -68,7 +75,9 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h2 className="footer-heading">Company</h2>
+          <Link to="/about/who-we-are" className="footer-heading-link">
+            <h2 className="footer-heading">Company</h2>
+          </Link>
           <Link to="/about/who-we-are">Who We Are</Link>
           <Link to="/about/leadership">Leadership</Link>
           <Link to="/about/partners">Partners</Link>
@@ -77,7 +86,9 @@ function Footer() {
         </div>
 
         <div className="footer-col">
-          <h2 className="footer-heading">Resources</h2>
+          <Link to="/insights/case-studies" className="footer-heading-link">
+            <h2 className="footer-heading">Resources</h2>
+          </Link>
           <Link to="/insights/case-studies">Case Studies</Link>
           <Link to="/insights/blogs">Blog</Link>
           <Link to="/careers/benefits">Benefits</Link>

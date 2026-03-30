@@ -52,7 +52,7 @@ function Navbar() {
 
         {/* Brand */}
         <Link className="brand-lockup" to="/">
-          <img className="brand-logo" src="/logo.svg" alt="OmiO Software Solutions logo" />
+          <img className="brand-logo" src="/logo.png" alt="OmiO Software Solutions logo" />
           <div>
             <div className="brand-name">OmiO</div>
             <div className="brand-subtitle">{common.brandSubtitle}</div>

@@ -82,7 +82,7 @@ function AboutPage() {
           engineering depth and execution discipline to make it happen.
         </p>
         <p>
-          Founded in {companyInfo.founded}, OmiO started as a small engineering practice
+          Established in {companyInfo.founded}, OmiO started as an engineering practice
           with a clear belief: the best technology work comes from teams that care about
           craft and communicate honestly. That belief still drives everything we do.
         </p>

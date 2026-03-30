@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { contactChannels, socialLinks, companyInfo } from '../data/links';
 import { API_BASE } from '../config/api';
 import SeoHead from '../components/SeoHead';
@@ -77,11 +77,38 @@ const icons = {
 };
 
 const INITIAL_FORM = { name: '', email: '', channel: 'general', subject: '', message: '' };
+const FALLBACK_INBOX = 'hello@omio.world';
 
-function ContactForm() {
+function getChannelInbox(channel) {
+  return contactChannels.find((entry) => entry.key === channel)?.email || FALLBACK_INBOX;
+}
+
+function buildMailtoUrl(form, inbox = getChannelInbox(form.channel)) {
+  const params = new URLSearchParams();
+  params.set('subject', form.subject.trim() || `Website inquiry from ${form.name.trim() || 'website visitor'}`);
+  params.set(
+    'body',
+    [
+      `Name: ${form.name.trim() || ''}`,
+      `Email: ${form.email.trim() || ''}`,
+      `Topic: ${form.channel || 'general'}`,
+      '',
+      form.message.trim() || '',
+    ].join('\n'),
+  );
+  return `mailto:${inbox}?${params.toString()}`;
+}
+
+function ContactForm({ initialChannel = 'general' }) {
   const [form, setForm] = useState(INITIAL_FORM);
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [errMsg, setErrMsg] = useState('');
+  const [mailClientUrl, setMailClientUrl] = useState('');
+  const [deliveryMessage, setDeliveryMessage] = useState('');
+
+  useEffect(() => {
+    setForm((current) => ({ ...current, channel: initialChannel }));
+  }, [initialChannel]);
 
   const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -120,12 +147,24 @@ function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(trimmed),
       });
-      const data = await res.json();
+      const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || 'Submission failed');
+      const inbox = data.inbox || getChannelInbox(trimmed.channel);
+      setMailClientUrl(buildMailtoUrl(trimmed, inbox));
+      setDeliveryMessage(
+        data.emailSent === false
+          ? `Your message was saved, but email delivery is not configured yet. Please also send it to ${inbox}.`
+          : 'We received your message and will respond within one business day.',
+      );
       setStatus('success');
       setForm(INITIAL_FORM);
     } catch (err) {
-      setErrMsg(err.message);
+      setMailClientUrl(buildMailtoUrl(trimmed));
+      if (err.name === 'TypeError' && err.message === 'Failed to fetch') {
+        setErrMsg('Unable to reach our server. Please use your email app to send the message directly.');
+      } else {
+        setErrMsg(err.message);
+      }
       setStatus('error');
     }
   };
@@ -140,8 +179,13 @@ function ContactForm() {
           </svg>
         </div>
         <h3>Message sent</h3>
-        <p>We received your message and will respond within one business day.</p>
-        <button className="contact-form-submit" onClick={() => setStatus('idle')}>Send another</button>
+        <p>{deliveryMessage}</p>
+        {mailClientUrl && (
+          <a className="contact-form-submit contact-form-submit--secondary" href={mailClientUrl}>
+            Open email app
+          </a>
+        )}
+        <button className="contact-form-submit" type="button" onClick={() => setStatus('idle')}>Send another</button>
       </div>
     );
   }
@@ -217,7 +261,14 @@ function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p className="contact-form__error" role="alert">{errMsg}</p>
+        <div className="contact-form__error" role="alert">
+          <p>{errMsg}</p>
+          {mailClientUrl && (
+            <a className="contact-form__fallback-link" href={mailClientUrl}>
+              Send with your email app instead
+            </a>
+          )}
+        </div>
       )}
 
       <button
@@ -232,6 +283,14 @@ function ContactForm() {
 }
 
 function ContactPage() {
+  const formSectionRef = useRef(null);
+  const [selectedChannel, setSelectedChannel] = useState('general');
+
+  const handleChannelCardClick = (channelKey) => {
+    setSelectedChannel(channelKey);
+    formSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div className="page-stack">
       <SeoHead
@@ -252,11 +311,12 @@ function ContactPage() {
       {/* ── Contact cards ─────────────────── */}
       <section className="contact-grid" aria-label="Contact channels">
         {contactChannels.map((channel) => (
-          <a
+          <button
             key={channel.key}
-            href={`mailto:${channel.email}`}
             className="contact-card"
+            type="button"
             aria-label={`${channel.label} — ${channel.email}`}
+            onClick={() => handleChannelCardClick(channel.key)}
           >
             <div className="contact-card__icon" aria-hidden="true">
               {icons[channel.icon]}
@@ -272,12 +332,12 @@ function ContactPage() {
                 <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
               </svg>
             </div>
-          </a>
+          </button>
         ))}
       </section>
 
       {/* ── Direct message form ───────────── */}
-      <section className="contact-form-section" aria-label="Send a message">
+      <section id="direct-message" ref={formSectionRef} className="contact-form-section" aria-label="Send a message">
         <div className="contact-form-section__header">
           <p className="section-eyebrow">Direct message</p>
           <h2>Write to us directly</h2>
@@ -286,7 +346,7 @@ function ContactPage() {
           </p>
         </div>
         <div className="contact-form-wrap">
-          <ContactForm />
+          <ContactForm initialChannel={selectedChannel} />
         </div>
       </section>
 
@@ -297,11 +357,19 @@ function ContactPage() {
           <h3>Within one business day</h3>
           <p>We read every message and route it to the right person. Sales and support requests get priority handling.</p>
         </div>
-        <div className="contact-info-strip__col">
+        <a
+          className="contact-info-strip__col contact-info-strip__col--link"
+          href="https://www.google.com/maps/search/?api=1&query=Uppal,+Hyderabad,+Telangana+500039,+India"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
           <p className="section-eyebrow">Office</p>
           <h3>{companyInfo.address}</h3>
           <p>OmiO operates as a distributed team. We work with clients across Europe, Asia, and North America.</p>
-        </div>
+          <span className="contact-map-link">
+            View on Google Maps
+          </span>
+        </a>
         <div className="contact-info-strip__col">
           <p className="section-eyebrow">Connect with us</p>
           <h3>Follow along</h3>
