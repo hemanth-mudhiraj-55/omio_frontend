@@ -483,26 +483,6 @@ const navGroupTranslations = {
    NAVIGATION — ITEM TITLES & DESCRIPTIONS
 ───────────────────────────────────────────────── */
 const navItemTranslations = {
-  '/services/web-development': {
-    title: { en: 'Web Development', de: 'Webentwicklung', ja: 'Web開発', pl: 'Tworzenie stron', uk: 'Веб-розробка' },
-    description: {
-      en: 'Custom web platforms with strong UX, scalable architecture, and measurable business outcomes.',
-      de: 'Individuelle Webplattformen mit starker UX, skalierbarer Architektur und messbaren Ergebnissen.',
-      ja: '優れたUX、スケーラブルなアーキテクチャ、測定可能なビジネス成果を持つカスタムWebプラットフォーム。',
-      pl: 'Niestandardowe platformy web z silnym UX, skalowalną architekturą i mierzalnymi wynikami.',
-      uk: 'Кастомні веб-платформи з сильним UX, масштабованою архітектурою та вимірюваними результатами.',
-    },
-  },
-  '/services/mobile-development': {
-    title: { en: 'Mobile Development', de: 'Mobile Entwicklung', ja: 'モバイル開発', pl: 'Tworzenie aplikacji mobilnych', uk: 'Мобільна розробка' },
-    description: {
-      en: 'iOS and Android experiences built for performance, polish, and product iteration speed.',
-      de: 'iOS- und Android-Apps für Performance, Qualität und schnelle Produktiteration.',
-      ja: 'パフォーマンス、磨き上げ、製品イテレーション速度のために構築されたiOSおよびAndroidエクスペリエンス。',
-      pl: 'Aplikacje iOS i Android tworzone z myślą o wydajności, jakości i szybkości iteracji.',
-      uk: 'iOS та Android застосунки для продуктивності, якості та швидкості ітерацій.',
-    },
-  },
   '/services/cloud-devops-custom-integration': {
     title: { en: 'Cloud, DevOps & Integration', de: 'Cloud, DevOps & Integration', ja: 'クラウド・DevOps・統合', pl: 'Cloud, DevOps i Integracje', uk: 'Cloud, DevOps та Інтеграції' },
     description: {
@@ -772,6 +752,7 @@ export function getLocalizedContent(language) {
       description: translate(t.description, language),
     })),
     labels: {
+      contact: translate(translations.contact, language),
       servicesHeading: translate(translations.servicesHeading, language),
       servicesSubheading: translate(translations.servicesSubheading, language),
       whyOmiO: translate(translations.whyOmiO, language),

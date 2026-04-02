@@ -1,9 +1,9 @@
-import { useLocation, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import SectionIntro from '../components/SectionIntro';
 import SeoHead from '../components/SeoHead';
+import { imagePaths } from '../config/imagePaths';
 import { useSite } from '../context/SiteContext';
 import { getLocalizedContent } from '../data/localizedContent';
-import { imagePaths } from '../config/imagePaths';
 
 function ContentPage() {
   const { pathname } = useLocation();
@@ -26,7 +26,7 @@ function ContentPage() {
   return (
     <div className="page-stack">
       <SeoHead
-        title={`${page.title} — ${page.group}`}
+        title={`${page.title} - ${page.group}`}
         description={page.intro}
       />
 
@@ -35,7 +35,7 @@ function ContentPage() {
       </section>
 
       <div className="content-page-visual">
-        {pageImage && <img src={pageImage} alt={`${page.title} — OmiO Software Solutions`} />}
+        {pageImage && <img src={pageImage} alt={`${page.title} - OmiO Software Solutions`} />}
       </div>
 
       {page.body && (
@@ -75,7 +75,6 @@ function ContentPage() {
           ))}
         </div>
       )}
-
     </div>
   );
 }

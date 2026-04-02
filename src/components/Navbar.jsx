@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { imagePaths } from '../config/imagePaths';
 import { useSite } from '../context/SiteContext';
@@ -8,21 +8,22 @@ function ThemeIcon({ theme }) {
   if (theme === 'light') {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
       </svg>
     );
   }
+
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </svg>
   );
 }
@@ -41,6 +42,27 @@ function Navbar() {
     setOpenGroup(null);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.key === 'Escape') {
+        setActiveGroup(null);
+        setMenuOpen(false);
+        setOpenGroup(null);
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const currentGroup =
     navigationGroups.find((group) => group.key === activeGroup) ?? navigationGroups[0];
 
@@ -49,8 +71,6 @@ function Navbar() {
   return (
     <header className="nav-wrapper" onMouseLeave={() => setActiveGroup(null)}>
       <div className="nav-bar">
-
-        {/* Brand */}
         <Link className="brand-lockup" to="/">
           <img className="brand-logo" src="/logo.png" alt="OmiO Software Solutions logo" />
           <div>
@@ -59,13 +79,13 @@ function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop: center nav links */}
         <nav className="nav-center" aria-label="Primary navigation">
           {navigationGroups.map((group) => (
             <div
               key={group.key}
               className="nav-item"
               onMouseEnter={() => setActiveGroup(group.key)}
+              onFocus={() => setActiveGroup(group.key)}
             >
               <NavLink to={group.path} onClick={() => setActiveGroup(null)}>
                 {group.label}
@@ -74,7 +94,6 @@ function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop: right actions */}
         <div className="nav-actions">
           <select
             className="language-selector"
@@ -97,7 +116,6 @@ function Navbar() {
           <Link className="contact-button" to="/contact">{common.contact}</Link>
         </div>
 
-        {/* Mobile: compact right icons */}
         <div className="nav-actions-mobile">
           <button
             className="theme-toggle"
@@ -110,31 +128,28 @@ function Navbar() {
           <button
             className={`hamburger-btn${menuOpen ? ' hamburger-btn--open' : ''}`}
             type="button"
-            onClick={() => setMenuOpen((v) => !v)}
+            onClick={() => setMenuOpen((value) => !value)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             {menuOpen ? (
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             ) : (
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             )}
           </button>
         </div>
       </div>
 
-      {/* Desktop mega menu */}
-      <div
-        className={`mega-menu ${activeGroup ? 'mega-menu--visible' : ''}`}
-        aria-live="polite"
-      >
+      <div className={`mega-menu ${activeGroup ? 'mega-menu--visible' : ''}`} aria-live="polite">
         <div className="mega-menu-list">
           <div className="mega-menu-intro">
             <p className="section-eyebrow">{currentGroup.label}</p>
@@ -153,7 +168,7 @@ function Navbar() {
         <div className="mega-card">
           <div className="mega-card-visual">
             {featuredImage ? (
-              <img src={featuredImage} alt={`${currentGroup.label} — featured visual`} />
+              <img src={featuredImage} alt={`${currentGroup.label} - featured visual`} />
             ) : (
               <div className="mega-card-placeholder">
                 <span>{common.featuredVisualPlaceholder}</span>
@@ -167,8 +182,8 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile drawer menu */}
       <div
+        id="mobile-navigation"
         className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}
         aria-label="Mobile navigation"
         aria-hidden={!menuOpen}
@@ -183,7 +198,7 @@ function Navbar() {
               >
                 <span>{group.label}</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"/>
+                  <polyline points="6 9 12 15 18 9" />
                 </svg>
               </button>
               {openGroup === group.key && (

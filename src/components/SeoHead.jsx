@@ -5,28 +5,37 @@ const SITE_URL = 'https://omio.world';
 const SITE_NAME = 'OmiO Software Solutions';
 const DEFAULT_TITLE = 'OmiO Software Solutions | Enterprise Software & AI';
 const DEFAULT_DESCRIPTION =
-  'OmiO Software Solutions — enterprise-grade software services, AI agent evaluation, cloud DevOps, and proven case studies from real delivery.';
+  'OmiO Software Solutions - enterprise-grade software services, AI agent evaluation, cloud DevOps, and proven case studies from real delivery.';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const HREFLANG_CODES = ['en', 'de', 'ja', 'pl', 'uk'];
 
 function setMeta(name, content, attr = 'name') {
-  let el = document.querySelector(`meta[${attr}="${name}"]`);
-  if (!el) {
-    el = document.createElement('meta');
-    el.setAttribute(attr, name);
-    document.head.appendChild(el);
+  let element = document.querySelector(`meta[${attr}="${name}"]`);
+
+  if (!content) {
+    element?.remove();
+    return;
   }
-  el.setAttribute('content', content);
+
+  if (!element) {
+    element = document.createElement('meta');
+    element.setAttribute(attr, name);
+    document.head.appendChild(element);
+  }
+
+  element.setAttribute('content', content);
 }
 
 function setCanonical(href) {
-  let el = document.querySelector('link[rel="canonical"]');
-  if (!el) {
-    el = document.createElement('link');
-    el.setAttribute('rel', 'canonical');
-    document.head.appendChild(el);
+  let element = document.querySelector('link[rel="canonical"]');
+
+  if (!element) {
+    element = document.createElement('link');
+    element.setAttribute('rel', 'canonical');
+    document.head.appendChild(element);
   }
-  el.setAttribute('href', href);
+
+  element.setAttribute('href', href);
 }
 
 export default function SeoHead({ title, description, type = 'website', image }) {
@@ -39,25 +48,22 @@ export default function SeoHead({ title, description, type = 'website', image })
 
   useEffect(() => {
     document.title = fullTitle;
+    document.documentElement.lang = 'en';
 
-    // GA4 SPA page view tracking
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', { page_path: pathname, page_title: fullTitle });
     }
 
-    // Meta (Facebook) Pixel SPA page view tracking
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'PageView');
     }
 
-    // Standard meta
     setMeta('description', desc);
-
-    // Canonical
+    setMeta('robots', 'index,follow');
+    setMeta('theme-color', '#0f172a');
     setCanonical(url);
 
-    // Hreflang tags
-    document.querySelectorAll('link[hreflang]').forEach((el) => el.remove());
+    document.querySelectorAll('link[hreflang]').forEach((element) => element.remove());
     HREFLANG_CODES.forEach((code) => {
       const link = document.createElement('link');
       link.setAttribute('rel', 'alternate');
@@ -65,21 +71,22 @@ export default function SeoHead({ title, description, type = 'website', image })
       link.setAttribute('href', url);
       document.head.appendChild(link);
     });
+
     const xDefault = document.createElement('link');
     xDefault.setAttribute('rel', 'alternate');
     xDefault.setAttribute('hreflang', 'x-default');
     xDefault.setAttribute('href', url);
     document.head.appendChild(xDefault);
 
-    // Open Graph
     setMeta('og:title', fullTitle, 'property');
     setMeta('og:description', desc, 'property');
     setMeta('og:url', url, 'property');
     setMeta('og:type', type, 'property');
     setMeta('og:image', img, 'property');
+    setMeta('og:image:alt', `${fullTitle} preview image`, 'property');
     setMeta('og:site_name', SITE_NAME, 'property');
 
-    // Twitter Card
+    setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', fullTitle);
     setMeta('twitter:description', desc);
     setMeta('twitter:image', img);
@@ -87,7 +94,7 @@ export default function SeoHead({ title, description, type = 'website', image })
     return () => {
       document.title = DEFAULT_TITLE;
     };
-  }, [fullTitle, desc, url, type, img]);
+  }, [desc, fullTitle, img, pathname, type, url]);
 
   return null;
 }

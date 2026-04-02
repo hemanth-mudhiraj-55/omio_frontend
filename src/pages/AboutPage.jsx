@@ -1,172 +1,144 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { companyInfo } from '../data/links';
 import SeoHead from '../components/SeoHead';
+import { useSite } from '../context/SiteContext';
 
-const values = [
-  {
-    title: 'Craft over shortcuts',
-    description:
-      'We treat software as a discipline. Every decision — from naming conventions to deployment strategy — is made with long-term quality in mind.',
-  },
-  {
-    title: 'Honest communication',
-    description:
-      'We share progress, risks, and trade-offs openly. Clients never have to guess where a project stands or why a recommendation was made.',
-  },
-  {
-    title: 'Outcome-driven delivery',
-    description:
-      'Beautiful code means nothing if it does not solve the business problem. We measure success by the results our work enables, not the hours logged.',
-  },
-  {
-    title: 'Continuous learning',
-    description:
-      'Technology evolves quickly. The team invests deliberately in research, experimentation, and knowledge sharing to stay ahead of what matters.',
-  },
-  {
-    title: 'Respectful collaboration',
-    description:
-      'Great work happens when people feel safe to challenge ideas, ask questions, and contribute across disciplines without hierarchy getting in the way.',
-  },
-  {
-    title: 'Sustainable pace',
-    description:
-      'We build for the long term — both in code and in how we work. Burnout does not produce great software, and we do not pretend otherwise.',
-  },
-];
+function AnimatedAboutStat({ value, suffix = '', label }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef(null);
 
-const stats = [
-  { number: '50+', label: 'Projects delivered' },
-  { number: '9', label: 'Service verticals' },
-  { number: '5', label: 'Countries served' },
-  { number: '24/7', label: 'Delivery mindset' },
-];
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 },
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return undefined;
+
+    const target = Number(value) || 0;
+    const duration = 1200;
+    const start = performance.now();
+    let frameId = 0;
+
+    const animate = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - (1 - progress) ** 3;
+      setDisplayValue(Math.round(target * eased));
+      if (progress < 1) {
+        frameId = window.requestAnimationFrame(animate);
+      }
+    };
+
+    frameId = window.requestAnimationFrame(animate);
+    return () => window.cancelAnimationFrame(frameId);
+  }, [started, value]);
+
+  return (
+    <div ref={ref} className="about-stat">
+      <span className="about-stat__number">{`${displayValue}${suffix}`}</span>
+      <span className="about-stat__label">{label}</span>
+    </div>
+  );
+}
 
 function AboutPage() {
+  const { siteSettings } = useSite();
+  const about = siteSettings.aboutPage;
+  const aiBot = siteSettings.aiBot;
+  const stats = siteSettings.heroStats;
+
   return (
     <div className="page-stack">
       <SeoHead
         title="Who We Are"
-        description="OmiO Software Solutions is a technology services company focused on product engineering, enterprise AI, and operational delivery. Learn about our mission, values, and team."
+        description="OmiO Software Solutions is a technology startup focused on software development, AI benchmarking, AI agent evaluation, and custom technology solutions."
       />
 
-      {/* ── Hero ──────────────────────────── */}
       <header className="about-hero">
-        <p className="section-eyebrow">About OmiO</p>
-        <h1>Software built with intention</h1>
-        <p className="about-hero__sub">
-          OmiO Software Solutions is a technology services company focused on product engineering,
-          enterprise AI, and operational delivery. We work with organisations that value
-          precision, transparency, and long-term thinking over quick fixes.
-        </p>
+        <p className="section-eyebrow">{about.eyebrow}</p>
+        <h1>{about.title}</h1>
+        <p className="about-hero__sub">{about.description}</p>
       </header>
 
-      {/* ── Stats ─────────────────────────── */}
       <div className="about-stats">
         {stats.map((stat) => (
-          <div key={stat.label} className="about-stat">
-            <span className="about-stat__number">{stat.number}</span>
-            <span className="about-stat__label">{stat.label}</span>
-          </div>
+          <AnimatedAboutStat
+            key={stat.id || stat.label}
+            value={stat.value}
+            suffix={stat.suffix}
+            label={stat.label}
+          />
         ))}
       </div>
 
-      {/* ── Mission ───────────────────────── */}
       <section className="about-section">
         <p className="section-eyebrow">Our mission</p>
-        <h2>Help ambitious teams ship reliable, intelligent systems</h2>
-        <p>
-          We exist to close the gap between technical ambition and operational reality.
-          Whether a team needs a modern web platform, an AI agent evaluation framework,
-          or a staffing partner that understands delivery culture — OmiO provides the
-          engineering depth and execution discipline to make it happen.
-        </p>
-        <p>
-          Established in {companyInfo.founded}, OmiO started as an engineering practice
-          with a clear belief: the best technology work comes from teams that care about
-          craft and communicate honestly. That belief still drives everything we do.
-        </p>
+        <h2>{about.missionTitle}</h2>
+        <p>{about.missionBody}</p>
+        <p>{about.missionBody2}</p>
       </section>
 
-      {/* ── Values ────────────────────────── */}
       <section className="about-section">
         <p className="section-eyebrow">What we stand for</p>
         <h2>Values that shape every engagement</h2>
         <div className="about-values-grid">
-          {values.map((v) => (
-            <article key={v.title} className="about-value-card">
-              <h3>{v.title}</h3>
-              <p>{v.description}</p>
+          {about.values.map((value) => (
+            <article key={value.title} className="about-value-card">
+              <h3>{value.title}</h3>
+              <p>{value.description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      {/* ── How we work ───────────────────── */}
       <section className="about-section">
         <p className="section-eyebrow">How we work</p>
-        <h2>Distributed, deliberate, and dependable</h2>
-        <p>
-          OmiO operates as a remote-first company with team members across Europe, Asia,
-          and North America. We structure work around asynchronous communication, clear
-          ownership, and short feedback loops — so timezone differences become an advantage,
-          not a bottleneck.
-        </p>
-        <p>
-          Every engagement begins with a discovery phase where we align on goals, constraints,
-          and success criteria. From there, we work in focused delivery cycles with regular
-          check-ins, transparent progress updates, and a shared commitment to shipping on time.
-        </p>
+        <h2>{about.workTitle}</h2>
+        <p>{about.workBody}</p>
+        <p>{about.workBody2}</p>
       </section>
 
-      {/* ── Expertise ─────────────────────── */}
       <section className="about-section">
         <p className="section-eyebrow">Areas of expertise</p>
         <h2>Deep capability where it counts</h2>
         <div className="about-values-grid">
-          <article className="about-value-card">
-            <h3>Product Engineering</h3>
-            <p>
-              Full-stack web and mobile development with a focus on architecture, performance,
-              and design systems that scale without accumulating technical debt.
-            </p>
-          </article>
-          <article className="about-value-card">
-            <h3>Enterprise AI</h3>
-            <p>
-              From AI agent design and evaluation to supervised fine-tuning and RLHF — we help
-              teams bring intelligent systems into production with measurement and control.
-            </p>
-          </article>
-          <article className="about-value-card">
-            <h3>Cloud & DevOps</h3>
-            <p>
-              Infrastructure automation, CI/CD pipeline design, and custom integrations that
-              reduce friction between development, testing, and deployment environments.
-            </p>
-          </article>
-          <article className="about-value-card">
-            <h3>Quality & Monitoring</h3>
-            <p>
-              Continuous regression testing, observability dashboards, and production health
-              checks that keep complex systems trustworthy after launch.
-            </p>
-          </article>
+          {about.expertise.map((item) => (
+            <article key={item.title} className="about-value-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────── */}
+      <section className="about-section">
+        <p className="section-eyebrow">AI assistant</p>
+        <h2>Meet {aiBot.name}</h2>
+        <p>{aiBot.summary}</p>
+        <div className="about-ocito-card">
+          <h3>{aiBot.greeting}</h3>
+          <pre className="about-ocito-prompt">{aiBot.systemPrompt}</pre>
+        </div>
+      </section>
+
       <section className="about-section about-cta">
-        <h2>Ready to build something meaningful?</h2>
-        <p className="about-cta__text">
-          Every conversation starts with understanding your goals. Reach out and let us
-          explore how OmiO can help.
-        </p>
+        <h2>{about.ctaTitle}</h2>
+        <p className="about-cta__text">{about.ctaText}</p>
         <Link className="contact-button" to="/contact">
           Get in touch
         </Link>
       </section>
-
     </div>
   );
 }

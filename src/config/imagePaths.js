@@ -4,8 +4,6 @@ const heroBackgroundDarkAsset = '/heroBackground.webp';
 import caseStudy from '../assets/services/caseStudies.webp'
 import careerOppertunities from '../assets/navItems/careerOppertunities.png'
 import aboutUs from '../assets/navItems/aboutUs.png'
-import appDev from '../assets/services/appDevelopment.webp'
-import webDev from '../assets/services/webDevelopment.webp'
 import services from '../assets/navItems/services.webp'
 import devOps from '../assets/services/DevOps.webp'
 import aiAgentEvalution from '../assets/services/aiAgentEvalution.webp'
@@ -37,8 +35,6 @@ export const imagePaths = {
     about: aboutUs,
   },
   pageImages: {
-    '/services/web-development': webDev,
-    '/services/mobile-development': appDev,
     '/services/cloud-devops-custom-integration': devOps,
     '/services/ai-agent-evaluation-benchmarking': aiAgentEvalution,
     '/services/enterprise-ai-agents': enterpriseAI,

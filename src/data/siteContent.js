@@ -1,15 +1,5 @@
 const serviceItems = [
   {
-    title: 'Web Development',
-    description: 'Custom web platforms with strong UX, scalable architecture, and measurable business outcomes.',
-    path: '/services/web-development',
-  },
-  {
-    title: 'Mobile Development',
-    description: 'iOS and Android experiences built for performance, polish, and product iteration speed.',
-    path: '/services/mobile-development',
-  },
-  {
     title: 'Cloud, DevOps & Custom Integration',
     description: 'Reliable delivery pipelines, infrastructure automation, and systems that connect cleanly.',
     path: '/services/cloud-devops-custom-integration',
@@ -114,7 +104,7 @@ export const navigationGroups = [
   {
     key: 'services',
     label: 'Services',
-    path: '/services/web-development',
+    path: '/services/cloud-devops-custom-integration',
     description: 'Engineering, AI delivery, and platform acceleration services.',
     featuredTitle: 'Build systems that stay elegant as they scale.',
     featuredDescription:
@@ -245,44 +235,6 @@ const createPage = ({ title, group, groupKey, intro, eyebrow, highlights = [], b
 });
 
 export const pageContent = {
-  '/services/web-development': createPage({
-    title: 'Web Development',
-    group: 'Services',
-    groupKey: 'services',
-    eyebrow: 'Service',
-    intro: 'Elegant digital products, platforms, and internal tools engineered for speed and long-term maintainability.',
-    highlights: ['Frontend architecture', 'API integrations', 'Platform modernization', 'Performance optimisation', 'Design system implementation'],
-    body: 'We design and engineer web platforms that balance visual quality with engineering precision. From product launches to large-scale platform migrations, every build is structured for longevity — clean component architecture, tested APIs, and deployment pipelines that hold up under real traffic.',
-    details: [
-      {
-        heading: 'What We Build',
-        text: 'End-to-end web applications using React, Next.js, TypeScript, and modern backend frameworks including Node.js, Python, and Go. We handle everything from architecture decisions and database schema design to production deployment, CDN configuration, and ongoing maintenance. Each project is scoped and staffed to match the actual complexity of the work.',
-      },
-      {
-        heading: 'Our Approach',
-        text: 'We start with your business goals and work backward into technical choices. Every decision — from state management strategy to API design — is made to reduce long-term complexity, not add to it. We write code that the next engineer can understand and extend, because we know that most of the value in software is realised after the initial launch.',
-      },
-    ],
-  }),
-  '/services/mobile-development': createPage({
-    title: 'Mobile Development',
-    group: 'Services',
-    groupKey: 'services',
-    eyebrow: 'Service',
-    intro: 'Mobile applications shaped around performance, intuitive flows, and release confidence.',
-    highlights: ['iOS and Android delivery', 'Design system parity', 'Store-readiness support', 'Offline-first architecture', 'Push notifications & analytics'],
-    body: 'Cross-platform and native mobile applications that feel at home on every device. We build for the platforms your users are on, with performance and release velocity treated as first-class requirements — not optimised after the fact.',
-    details: [
-      {
-        heading: 'Platforms & Frameworks',
-        text: 'React Native and Flutter for cross-platform delivery where time-to-market matters. Swift and Kotlin for native builds where platform depth and performance are paramount. We match the stack to the product requirements, not to our own preferences, and we are honest about the trade-offs at each decision point.',
-      },
-      {
-        heading: 'Beyond Launch',
-        text: 'App store submission, TestFlight and internal testing pipelines, push notification infrastructure, in-app analytics, crash reporting integration, and ongoing performance monitoring after release. We stay engaged after launch because the real challenges often surface once real users start using the product.',
-      },
-    ],
-  }),
   '/services/cloud-devops-custom-integration': createPage({
     title: 'Cloud, DevOps & Custom Integration',
     group: 'Services',
